@@ -3,4 +3,5 @@ My own rest api for countries, will be used in [this](https://github.com/Zilezia
 
 # TODO
 - [X] Start working
-- [ ] Deploy on vercel
+- [ ] find host provider
+- [ ] create web scraper for data
