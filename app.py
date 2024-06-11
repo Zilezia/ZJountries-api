@@ -6,16 +6,14 @@ app = Flask(__name__)
 app.json.sort_keys = False
 api = Api(app)
 
+data = pd.read_json("./data/data.json").to_dict(orient='records')
+
 class Countries(Resource):
     def get(self):
-        df = pd.read_json("data.json")
-        data = df.to_dict(orient='records')
         return jsonify(data)
 
 class Country(Resource):
     def get(self, country_id):
-        df = pd.read_json("data.json")
-        data = df.to_dict(orient='records')
         for country in data:
             if country['id'] == country_id:
                 return jsonify(country)
@@ -23,10 +21,8 @@ class Country(Resource):
     
 class CountryName(Resource):
     def get(self, name):
-        df = pd.read_json("data.json")
-        data = df.to_dict(orient='records')
         name_lower = name.lower()
-        matching_countries = [country for country in data if name_lower in country['names']['common'].lower()]
+        matching_countries = [country for country in data if name_lower in country['name']['common'].lower()]
         if matching_countries:
             return jsonify(matching_countries)
         else:
