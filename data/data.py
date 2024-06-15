@@ -30,81 +30,62 @@ try:
 
     data = []
     json_file_path = "./data/data.json"
-    retry_attempts = 3
     visited_urls = set()
     
     for row in rows:
         table = driver.find_element(By.CLASS_NAME, "mw-content-ltr")
-        country_elements = row.find_elements(By.XPATH, ".//td/b/a")
+        cell = row.find_element(By.XPATH, ".//td")
         
-        if not country_elements:
-            continue
-        
-        country = country_elements[0]
-        country_name = country.text
-        country_url = country.get_attribute('href')
+        try:
+            span_element = cell.find_element(By.XPATH, ".//span[1]")
+            common_name = span_element.get_attribute('id').replace('_', ' ')
+            
+            b_element = cell.find_element(By.XPATH, ".//b")
+            whole_cell = cell.text
+            b_elem_index = whole_cell.find(b_element.text)                
+            start_index = b_elem_index + len(b_element.text)
+            
+            if '\u2013' in whole_cell[start_index:]:
+                
+                try:
+                    ref_element = cell.find_element(By.XPATH, ".//sup").text.strip()
+                    main_text = whole_cell.replace(ref_element, '').strip()
+                    official_name = main_text[start_index:].strip()
+                    official_name = official_name.lstrip('\u2013 ').strip()
+                
+                except:
+                    official_name = whole_cell[start_index:].strip()
+                    official_name = official_name.lstrip('\u2013 ').strip()
+
+            else:
+                official_name = common_name
+
+        except Exception as e:
+            print(e)
+            driver.quit()
+            
+        country_url = b_element.find_element(By.XPATH, ".//a").get_attribute('href')
         
         if country_url in visited_urls:
             continue
         
-        print(country_url)
+        # country_data = get_country_data(driver, country_url)
         
-        country_data = get_country_data(driver, country_url)
+        # native_names = country_data["native"] if country_data["native"] else {"default": common_name}
         
-        if country_data:
+        if common_name:
             data.append({
                 "name": {
-                    "common": country_data["common"],
-                    "official": country_data["official"],
-                    "native": country_data["native"]
-                }
+                    "common": common_name,
+                    "official": official_name
+                    # "native": native_names
+                },
+                # "flag": country_data['flag']
+                # "demonyms": country_data['denonyms']
             })
-            # data.append({
-            #     "name": {
-            #         "common": country_data["common_name"],
-            #         "official": country_data["official_name"],
-            #         "native": [] # name/s in countrys official language/s
-            #     },
-            #     "population": "", # maybe add list of population by date/years
-            #     "flag": "", # svg flag link
-            #     "capital": {
-            #         "name": "",
-            #         "location": "", # geohack link,
-            #         "population": ""
-            #     },
-            #     "languages": {
-            #         "official": [], # official language/s spoken
-            #         "recognised": [] # recognised language/s spoken typically in that country
-            #     },
-            #     "denonyms": [],
-            #     "ethnic_groups": [
-            #         # {
-            #         #     "name": "name",
-            #         #     "percentage": "%"
-            #         # }
-            #     ],
-            #     "religions": [
-            #         # {
-            #         #     "name": "name",
-            #         #     "percentage": "%"
-            #         # }
-            #     ],
-            #     "area": {
-            #         "total": {
-            #             "km": "0",
-            #             "mi": "0"
-            #         },
-            #         "land": {
-            #             "km": "0",
-            #             "mi": "0"
-            #         },
-            #         "water_percent": "0"
-            #     }
-            # })
-            visited_urls.add(country_url) # so that wouldnt have duplicates
 
-        time.sleep(1) # maybe need this breaks too often
-        driver.back()
+        # time.sleep(1) # maybe need this breaks too often
+        # driver.back()
         
         WebDriverWait(driver, 50).until(
             EC.presence_of_element_located((By.CLASS_NAME, "mw-content-ltr"))
@@ -113,11 +94,11 @@ try:
         if len(data) % 1 == 0:
             save_to_json(data, json_file_path)
 
-    save_to_json(data, json_file_path) 
+    save_to_json(data, json_file_path)
 
 except Exception as e:
-    print(f"error: {e}")
-    
+    print(f"whole error: {e}")
+    driver.quit()    
 finally:
     driver.quit()
     
