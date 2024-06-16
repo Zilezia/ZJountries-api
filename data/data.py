@@ -69,7 +69,7 @@ try:
         if country_url in visited_urls:
             continue
         
-        # country_data = get_country_data(driver, country_url)
+        country_data = get_country_data(driver, country_url)
         
         # native_names = country_data["native"] if country_data["native"] else {"default": common_name}
         
@@ -77,15 +77,47 @@ try:
             data.append({
                 "name": {
                     "common": common_name,
-                    "official": official_name
-                    # "native": native_names
+                    "official": official_name,
+                    "native": []
                 },
-                # "flag": country_data['flag']
-                # "demonyms": country_data['denonyms']
+                "flag": country_data["flag"],
+                "demonyms": [],
+                "capital": {
+                    "name": "",
+                    "location": "",
+                    "population": ""
+                },
+                "languages": {
+                    "official": [],
+                    "recognised": []
+                },
+                "ethnic_groups": [
+                    {
+                        "name": "",
+                        "percentage": ""
+                    }
+                ],
+                "religions": [
+                    {
+                        "name": "",
+                        "percentage": ""
+                    }
+                ],
+                "area": {
+                    "total": {
+                        "km": "0",
+                        "mi": "0"
+                    },
+                    "land": {
+                        "km": "0",
+                        "mi": "0"
+                    },
+                    "water_percent": "0"
+                }
             })
 
         # time.sleep(1) # maybe need this breaks too often
-        # driver.back()
+        driver.back()
         
         WebDriverWait(driver, 50).until(
             EC.presence_of_element_located((By.CLASS_NAME, "mw-content-ltr"))
