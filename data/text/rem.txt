@@ -1,0 +1,53 @@
+Earth: 
+    https://www.wikidata.org/wiki/Q2
+
+    Europe:
+        https://www.wikidata.org/wiki/Q46
+        North
+        North-East
+        South
+        South-East
+        Eastern
+        Western
+        Central
+        South-West
+        North-West
+    
+    Africa:
+        https://www.wikidata.org/wiki/Q15
+
+        North
+        Central
+        West
+        South
+        East
+        Middle East
+    
+    North America:
+        https://www.wikidata.org/wiki/Q49
+
+    South America:
+        https://www.wikidata.org/wiki/Q18
+
+    Asia:
+        https://www.wikidata.org/wiki/Q48
+
+        East
+        South-East
+        Central
+        South
+        Middle East
+        North
+
+    Oceania: 
+        https://www.wikidata.org/wiki/Q55643
+
+        Australasia
+        Melanasia
+        Micronesia
+        Polynesia
+
+    Antarctica:
+        https://www.wikidata.org/wiki/Q51
+        West
+        East

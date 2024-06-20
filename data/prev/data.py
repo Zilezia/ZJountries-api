@@ -29,7 +29,7 @@ try:
     rows = table.find_elements(By.XPATH, ".//tbody/tr")
 
     data = []
-    json_file_path = "./data/data.json"
+    json_file_path = "./data/dataset/data.json"
     visited_urls = set()
     
     for row in rows:

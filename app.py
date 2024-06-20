@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.json.sort_keys = False
 api = Api(app)
 
-data = pd.read_json("./data/data.json").to_dict(orient='records')
+data = pd.read_json("./data/dataset/data.json").to_dict(orient='records')
 
 class Countries(Resource):
     def get(self):

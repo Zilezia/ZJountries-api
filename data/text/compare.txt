@@ -1,0 +1,46 @@
+North
+--------------
+Åland
+Bailiwick of Guernsey
+Jersey
+Sark
+Denmark
+Estonia
+Faroe Islands
+Finland
+Iceland
+Isle of Man
+Latvia
+Lithuania
+Norway
+Svalbard and Jan Mayen
+United Kingdom
+Sweden
+Scandinavia
+
+
+North West
+------------
+Iceland
+Republic of Ireland
+United Kingdom
+France
+Germany
+Netherlands
+Belgium
+Luxembourg
+Denmark
+Norway
+Sweden
+Switzerland
+Austria
+Liechtenstein
+Finland
+
+North East
+--------------
+Russia
+Latvia
+Lithuania
+Belarus
+Estonia
