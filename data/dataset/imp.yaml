@@ -1,0 +1,230 @@
+# useful properties for a place on wikidata
+properties:
+  official_name: P1448
+  native_label: P1705
+
+  population: P1082
+  demonyms: P1549
+  flag_img: P41 # P163 
+  
+  capital: P36
+  continent: P30
+  regions: P150
+  part_of: P361
+  
+  official_lang: P37
+  lang_used: P2936
+
+  official religion: P3075
+
+  alpha_2_code: P297
+  alpha_3_code: P298
+  numeric_code: P299
+
+# List of countries/territories
+
+place:
+- https://www.wikidata.org/wiki/Q36 # POLSKA!!!! ⬜🟥
+- https://www.wikidata.org/wiki/Q27
+- https://www.wikidata.org/wiki/Q25230
+- https://www.wikidata.org/wiki/Q785
+- https://www.wikidata.org/wiki/Q9676
+- https://www.wikidata.org/wiki/Q5689
+- https://www.wikidata.org/wiki/Q3405693
+- https://www.wikidata.org/wiki/Q35
+- https://www.wikidata.org/wiki/Q191
+- https://www.wikidata.org/wiki/Q4628
+- https://www.wikidata.org/wiki/Q33
+- https://www.wikidata.org/wiki/Q189
+- https://www.wikidata.org/wiki/Q211
+- https://www.wikidata.org/wiki/Q37
+- https://www.wikidata.org/wiki/Q20
+- https://www.wikidata.org/wiki/Q842829
+- https://www.wikidata.org/wiki/Q34
+- https://www.wikidata.org/wiki/Q212
+- https://www.wikidata.org/wiki/Q214
+- https://www.wikidata.org/wiki/Q218
+- https://www.wikidata.org/wiki/Q217
+- https://www.wikidata.org/wiki/Q28
+- https://www.wikidata.org/wiki/Q213
+- https://www.wikidata.org/wiki/Q219
+- https://www.wikidata.org/wiki/Q184
+- https://www.wikidata.org/wiki/Q232
+- https://www.wikidata.org/wiki/Q159
+- https://www.wikidata.org/wiki/Q222
+- https://www.wikidata.org/wiki/Q228
+- https://www.wikidata.org/wiki/Q225
+- https://www.wikidata.org/wiki/Q224
+- https://www.wikidata.org/wiki/Q1410
+- https://www.wikidata.org/wiki/Q41
+- https://www.wikidata.org/wiki/Q237
+- https://www.wikidata.org/wiki/Q38
+- https://www.wikidata.org/wiki/Q233
+- https://www.wikidata.org/wiki/Q236
+- https://www.wikidata.org/wiki/Q45
+- https://www.wikidata.org/wiki/Q238
+- https://www.wikidata.org/wiki/Q403
+- https://www.wikidata.org/wiki/Q215
+- https://www.wikidata.org/wiki/Q29
+- https://www.wikidata.org/wiki/Q221
+- https://www.wikidata.org/wiki/Q1246
+- https://www.wikidata.org/wiki/Q40
+- https://www.wikidata.org/wiki/Q31
+- https://www.wikidata.org/wiki/Q142
+- https://www.wikidata.org/wiki/Q183
+- https://www.wikidata.org/wiki/Q32
+- https://www.wikidata.org/wiki/Q235
+- https://www.wikidata.org/wiki/Q55
+- https://www.wikidata.org/wiki/Q39
+- https://www.wikidata.org/wiki/Q967
+- https://www.wikidata.org/wiki/Q970
+- https://www.wikidata.org/wiki/Q977
+- https://www.wikidata.org/wiki/Q986
+- https://www.wikidata.org/wiki/Q115
+- https://www.wikidata.org/wiki/Q114
+- https://www.wikidata.org/wiki/Q1019
+- https://www.wikidata.org/wiki/Q1020
+- https://www.wikidata.org/wiki/Q1027
+- https://www.wikidata.org/wiki/Q17063
+- https://www.wikidata.org/wiki/Q1029
+- https://www.wikidata.org/wiki/Q17070
+- https://www.wikidata.org/wiki/Q1037
+- https://www.wikidata.org/wiki/Q1042
+- https://www.wikidata.org/wiki/Q1045
+- https://www.wikidata.org/wiki/Q958
+- https://www.wikidata.org/wiki/Q1036
+- https://www.wikidata.org/wiki/Q924
+- https://www.wikidata.org/wiki/Q953
+- https://www.wikidata.org/wiki/Q954
+- https://www.wikidata.org/wiki/Q129003
+- https://www.wikidata.org/wiki/Q963
+- https://www.wikidata.org/wiki/Q1013
+- https://www.wikidata.org/wiki/Q1050
+- https://www.wikidata.org/wiki/Q1030
+- https://www.wikidata.org/wiki/Q962
+- https://www.wikidata.org/wiki/Q965
+- https://www.wikidata.org/wiki/Q1011
+- https://www.wikidata.org/wiki/Q1008
+- https://www.wikidata.org/wiki/Q1005
+- https://www.wikidata.org/wiki/Q117
+- https://www.wikidata.org/wiki/Q1006
+- https://www.wikidata.org/wiki/Q1007
+- https://www.wikidata.org/wiki/Q1014
+- https://www.wikidata.org/wiki/Q912
+- https://www.wikidata.org/wiki/Q1025
+- https://www.wikidata.org/wiki/Q1032
+- https://www.wikidata.org/wiki/Q1033
+- https://www.wikidata.org/wiki/Q1041
+- https://www.wikidata.org/wiki/Q1044
+- https://www.wikidata.org/wiki/Q945
+- https://www.wikidata.org/wiki/Q34497
+- https://www.wikidata.org/wiki/Q46197
+- https://www.wikidata.org/wiki/Q220982
+- https://www.wikidata.org/wiki/Q929
+- https://www.wikidata.org/wiki/Q657
+- https://www.wikidata.org/wiki/Q974
+- https://www.wikidata.org/wiki/Q1009
+- https://www.wikidata.org/wiki/Q916
+- https://www.wikidata.org/wiki/Q971
+- https://www.wikidata.org/wiki/Q983
+- https://www.wikidata.org/wiki/Q1000
+- https://www.wikidata.org/wiki/Q1039
+- https://www.wikidata.org/wiki/Q774
+- https://www.wikidata.org/wiki/Q792
+- https://www.wikidata.org/wiki/Q783
+- https://www.wikidata.org/wiki/Q811
+- https://www.wikidata.org/wiki/Q800
+- https://www.wikidata.org/wiki/Q804
+- https://www.wikidata.org/wiki/Q242
+- https://www.wikidata.org/wiki/Q778
+- https://www.wikidata.org/wiki/Q784
+- https://www.wikidata.org/wiki/Q786
+- https://www.wikidata.org/wiki/Q25228
+- https://www.wikidata.org/wiki/Q241
+- https://www.wikidata.org/wiki/Q13353
+- https://www.wikidata.org/wiki/Q126125
+- https://www.wikidata.org/wiki/Q26273
+- https://www.wikidata.org/wiki/Q244
+- https://www.wikidata.org/wiki/Q754
+- https://www.wikidata.org/wiki/Q18221
+- https://www.wikidata.org/wiki/Q757
+- https://www.wikidata.org/wiki/Q760
+- https://www.wikidata.org/wiki/Q763
+- https://www.wikidata.org/wiki/Q25362
+- https://www.wikidata.org/wiki/Q17054
+- https://www.wikidata.org/wiki/Q766
+- https://www.wikidata.org/wiki/Q790
+- https://www.wikidata.org/wiki/Q17012
+- https://www.wikidata.org/wiki/Q769
+- https://www.wikidata.org/wiki/Q130343
+- https://www.wikidata.org/wiki/Q25279
+- https://www.wikidata.org/wiki/Q5785
+- https://www.wikidata.org/wiki/Q25305
+- https://www.wikidata.org/wiki/Q30
+- https://www.wikidata.org/wiki/Q16
+- https://www.wikidata.org/wiki/Q23635
+- https://www.wikidata.org/wiki/Q34617
+- https://www.wikidata.org/wiki/Q414
+- https://www.wikidata.org/wiki/Q750
+- https://www.wikidata.org/wiki/Q155
+- https://www.wikidata.org/wiki/Q298
+- https://www.wikidata.org/wiki/Q739
+- https://www.wikidata.org/wiki/Q736
+- https://www.wikidata.org/wiki/Q3769
+- https://www.wikidata.org/wiki/Q734
+- https://www.wikidata.org/wiki/Q733
+- https://www.wikidata.org/wiki/Q419
+- https://www.wikidata.org/wiki/Q889
+- https://www.wikidata.org/wiki/Q35086
+- https://www.wikidata.org/wiki/Q730
+- https://www.wikidata.org/wiki/Q77
+- https://www.wikidata.org/wiki/Q717
+- https://www.wikidata.org/wiki/Q810
+- https://www.wikidata.org/wiki/Q219060
+- https://www.wikidata.org/wiki/Q79
+- https://www.wikidata.org/wiki/Q794
+- https://www.wikidata.org/wiki/Q43
+- https://www.wikidata.org/wiki/Q796
+- https://www.wikidata.org/wiki/Q712
+- https://www.wikidata.org/wiki/Q685
+- https://www.wikidata.org/wiki/Q691
+- https://www.wikidata.org/wiki/Q686
+- https://www.wikidata.org/wiki/Q252
+- https://www.wikidata.org/wiki/Q702
+- https://www.wikidata.org/wiki/Q709
+- https://www.wikidata.org/wiki/Q695
+- https://www.wikidata.org/wiki/Q697
+- https://www.wikidata.org/wiki/Q710
+- https://www.wikidata.org/wiki/Q683
+- https://www.wikidata.org/wiki/Q672
+- https://www.wikidata.org/wiki/Q678
+- https://www.wikidata.org/wiki/Q664
+- https://www.wikidata.org/wiki/Q408
+- https://www.wikidata.org/wiki/Q145
+- https://www.wikidata.org/wiki/Q851
+- https://www.wikidata.org/wiki/Q878
+- https://www.wikidata.org/wiki/Q846
+- https://www.wikidata.org/wiki/Q842
+- https://www.wikidata.org/wiki/Q805
+- https://www.wikidata.org/wiki/Q398
+- https://www.wikidata.org/wiki/Q817
+- https://www.wikidata.org/wiki/Q229
+- https://www.wikidata.org/wiki/Q858
+- https://www.wikidata.org/wiki/Q822
+- https://www.wikidata.org/wiki/Q801
+- https://www.wikidata.org/wiki/Q16645
+- https://www.wikidata.org/wiki/Q1183
+- https://www.wikidata.org/wiki/Q11703
+- https://www.wikidata.org/wiki/Q25359
+- https://www.wikidata.org/wiki/Q25596
+- https://www.wikidata.org/wiki/Q781
+- https://www.wikidata.org/wiki/Q21203
+- https://www.wikidata.org/wiki/Q172697
+- https://www.wikidata.org/wiki/Q23681
+- https://www.wikidata.org/wiki/Q34754
+- https://www.wikidata.org/wiki/Q23427
+- https://www.wikidata.org/wiki/Q907112
+- https://www.wikidata.org/wiki/Q25528
+- https://www.wikidata.org/wiki/Q26180
+- https://www.wikidata.org/wiki/Q25396
+- https://www.wikidata.org/wiki/Q223
