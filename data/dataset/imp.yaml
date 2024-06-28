@@ -5,17 +5,18 @@ properties:
 
   population: P1082
   demonyms: P1549
-  flag_img: P41 # P163 
-  
+  flag_img: P41 # P163
+
   capital: P36
   continent: P30
   regions: P150
   part_of: P361
-  
+  # coord_loc: P625 # might get it for later versions
+
   official_lang: P37
   lang_used: P2936
 
-  official religion: P3075
+  official_religion: P3075
 
   alpha_2_code: P297
   alpha_3_code: P298
@@ -228,3 +229,4 @@ place:
 - https://www.wikidata.org/wiki/Q26180
 - https://www.wikidata.org/wiki/Q25396
 - https://www.wikidata.org/wiki/Q223
+- https://www.wikidata.org/wiki/Q30971
