@@ -1,8 +1,0 @@
-<tr>
-    <th>
-        <a title='Demonym'>Demonym(s)</a>
-    </th>
-    <td>
-        <a> DATA </a>
-    </td>
-</tr>
