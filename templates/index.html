@@ -8,19 +8,19 @@
 <body>
     <p>code: <a href="https://github.com/Zilezia/ZJountries-api">https://github.com/Zilezia/ZJountries-api</a></p>
     <h1>try:</h1>
-    <p><a href="/all">/all</a></p>
-    <p><a href="/name/Poland">/name/Poland</a></p>
+    <p><a href="/{{ api_version }}/all">/{{ api_version }}/all</a></p>
+    <p><a href="/{{ api_version }}/name=Poland">/{{ api_version }}/name=Poland</a></p>
 
     <div class="iso-codes">
         <h2>ISO codes:</h2>
-        <p><a href="/alpha-2/pl">/alpha-2/pl</a></p>
-        <p><a href="/alpha-3/pol">/alpha-3/pol</a></p>
-        <p><a href="/numeric/616">/numeric/616</a></p>
+        <p><a href="/{{ api_version }}/iso2=pl">/{{ api_version }}/iso2=pl</a></p>
+        <p><a href="/{{ api_version }}/iso3=pol">/{{ api_version }}/iso3=pol</a></p>
+        <p><a href="/{{ api_version }}/isoN=616">/{{ api_version }}/isoN=616</a></p>
     </div>
     <div class="mult_combinations">
         <h2>Combinations:</h2>
-        <p><a href="/name/poland&germany">/name/poland&germany</a></p>
-        <p><a href="/alpha-2/pl&ca">/alpha-2/pl&ca</a></p>
+        <p><a href="/{{ api_version }}/name=poland,germany">/{{ api_version }}/name=poland,germany</a></p>
+        <p><a href="/{{ api_version }}/iso3=pl,ca">/{{ api_version }}/iso2=pl,ca</a></p>
     </div>
 </body>
 </html>

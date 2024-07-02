@@ -1,10 +1,15 @@
-from flask import Flask, jsonify, request, render_template
-from flask_restful import Resource, Api, reqparse
+from flask import Flask, jsonify, render_template
+from flask_restful import Resource, Api
 import pandas as pd
+
+from config import Config
 
 app = Flask(__name__)
 app.json.sort_keys = False
+app.config.from_object(Config)
+
 api = Api(app)
+api_ver = app.config['API_VERSION']
 
 data = pd.read_json("./data/dataset/data.json").to_dict(orient='records')
 
@@ -14,7 +19,7 @@ class Countries(Resource):
     
 class CountryName(Resource):
     def get(self, names):
-        names_list = names.split('&')
+        names_list = names.split(',')
         matching_countries = []
         for name in names_list:
             name_lower = name.lower()
@@ -28,7 +33,7 @@ class CountryName(Resource):
 
 class AlphaTwoCode(Resource):
     def get(self, alpha2s):
-        alpha2_list = alpha2s.split('&')
+        alpha2_list = alpha2s.split(',')
         matching_countries = []
         for alpha2 in alpha2_list:
             alpha2_lower = alpha2.lower()
@@ -42,7 +47,7 @@ class AlphaTwoCode(Resource):
         
 class AlphaThreeCode(Resource):
     def get(self, alpha3s):
-        alpha3_list = alpha3s.split('&')
+        alpha3_list = alpha3s.split(',')
         matching_countries = []
         for alpha3 in alpha3_list:
             alpha3_lower = alpha3.lower()
@@ -56,7 +61,7 @@ class AlphaThreeCode(Resource):
         
 class NumericCode(Resource):
     def get(self, numerics):
-        numeric_list = numerics.split('&')
+        numeric_list = numerics.split(',')
         matching_countries = []
         for numeric in numeric_list:
             matching_countries.extend(
@@ -67,15 +72,19 @@ class NumericCode(Resource):
         else:
             return jsonify({"error": "Country not found."}), 404
 
+@app.context_processor
+def inject_version():
+    return dict(api_version=app.config['API_VERSION'])
+
 @app.route("/")
 def home():
     return render_template("index.html")
 
-api.add_resource(Countries, '/all')
-api.add_resource(CountryName, "/name/<string:names>")
-api.add_resource(AlphaTwoCode, "/alpha-2/<string:alpha2s>")
-api.add_resource(AlphaThreeCode, "/alpha-3/<string:alpha3s>")
-api.add_resource(NumericCode, "/numeric/<string:numerics>")
+api.add_resource(Countries,     f"/{api_ver}/all")
+api.add_resource(CountryName,   f"/{api_ver}/name=<string:names>")
+api.add_resource(AlphaTwoCode,  f"/{api_ver}/iso2=<string:alpha2s>")
+api.add_resource(AlphaThreeCode,f"/{api_ver}/iso3=<string:alpha3s>")
+api.add_resource(NumericCode,   f"/{api_ver}/isoN=<string:numerics>")
 
 
 if __name__ == '__main__':
