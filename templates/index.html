@@ -3,24 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='styles.css') }}" type="text/css" rel="stylesheet"/>
     <title>ZJountries-api</title>
 </head>
-<body>
-    <p>code: <a href="https://github.com/Zilezia/ZJountries-api">https://github.com/Zilezia/ZJountries-api</a></p>
-    <h1>try:</h1>
-    <p><a href="/{{ api_version }}/all">/{{ api_version }}/all</a></p>
-    <p><a href="/{{ api_version }}/name=Poland">/{{ api_version }}/name=Poland</a></p>
+<body id="root">
+    
+    <nav class="sidebar">
+        <h1 class="title">ZJountries-api</h1>
 
-    <div class="iso-codes">
-        <h2>ISO codes:</h2>
-        <p><a href="/{{ api_version }}/iso2=pl">/{{ api_version }}/iso2=pl</a></p>
-        <p><a href="/{{ api_version }}/iso3=pol">/{{ api_version }}/iso3=pol</a></p>
-        <p><a href="/{{ api_version }}/isoN=616">/{{ api_version }}/isoN=616</a></p>
-    </div>
-    <div class="mult_combinations">
-        <h2>Combinations:</h2>
-        <p><a href="/{{ api_version }}/name=poland,germany">/{{ api_version }}/name=poland,germany</a></p>
-        <p><a href="/{{ api_version }}/iso3=pl,ca">/{{ api_version }}/iso2=pl,ca</a></p>
-    </div>
+        <a class="sect_link" href="#about">About</a>
+        <a class="sect_link" href="#all">All</a>
+        <a class="sect_link" href="#name">Name</a>
+        <a class="sect_link" href="#iso">ISO Codes</a>
+        <a class="sect_link" href="#multiple">Multiple</a>
+        <a class="sect_link" href="#github">Github</a>
+
+    </nav>
+    
+    <main class="main">
+        <!-- <p>code: <a href="https://github.com/Zilezia/ZJountries-api">https://github.com/Zilezia/ZJountries-api</a></p> -->
+
+        <!-- <section id="tests" class="section_cont">
+            <pre><code>print("hello!")</code></pre>
+        </section> -->
+
+        <section id="about" class="main_section">
+            <h2 class="section_title">About</h2>
+            <p class="n_text">This project is made in python inspired by <a class="pr_links" target="_blank" href="https://restcountries.com">restcountries.com</a>.</p>
+            
+            <p class="n_text">API version: {{ api_version }}</p>
+        </section>
+
+        <section id="all" class="main_section">
+            <h2 class="section_title">All:</h2>
+            
+            <p class="n_text">You can call everything by using <code>all</code></p>
+            <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/all</code>
+            <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/all" target="_blank">/{{ api_ver }}/all</a></p>
+        </section>
+
+        <section id="name" class="main_section">
+            <h2 class="section_title">Name:</h2>
+            <p class="n_text">Call any place by its name</p>
+            <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/name={name}</code>
+            <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/name=poland" target="_blank">/{{ api_ver }}/name=poland</a></p>
+        </section>
+        
+        <section id="iso-codes" class="main_section">
+            <h2 class="section_title">ISO codes:</h2>
+            
+            <p class="n_text">Can call any place that has an ISO-3166 code</p>
+            
+            <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/iso2={alpha2}</code>
+            <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/iso2=pl" target="_blank">/{{ api_ver }}/iso2=pl</a></p>
+            
+            <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/iso3={alpha3}</code>
+            <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/iso3=pol" target="_blank">/{{ api_ver }}/iso3=pol</a></p>
+
+            <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/isoN={numeric}</code>
+            <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/isoN=616" target="_blank">/{{ api_ver }}/isoN=616</a></p>    
+        </section>
+        
+        <section id="multiple" class="main_section">
+            <h2 class="section_title">Multiple</h2>
+            <p class="n_text">Can call multiple places at once, seperation is: <code>,</code></p>
+            <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/iso2={alpha2},{alpha2},{alpha2}</code>
+            <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/iso2=pl,ca,de" target="_blank">/{{ api_ver }}/iso2=pl,ca,de</a></p>    
+        </section>
+
+        <section id="github" class="main_section">
+            <h2 class="section_title">Github:</h2>
+            <a class="pr_links" href="https://github.com/Zilezia/ZJountries-api">https://github.com/Zilezia/ZJountries-api</a>
+        </section>
+    </main>
+
 </body>
 </html>

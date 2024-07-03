@@ -9,7 +9,7 @@ app.json.sort_keys = False
 app.config.from_object(Config)
 
 api = Api(app)
-api_ver = app.config['API_VERSION']
+api_ver = 'v'+app.config['API_VERSION']
 
 data = pd.read_json("./data/dataset/data.json").to_dict(orient='records')
 
@@ -74,7 +74,7 @@ class NumericCode(Resource):
 
 @app.context_processor
 def inject_version():
-    return dict(api_version=app.config['API_VERSION'])
+    return dict(api_version=app.config['API_VERSION'],api_ver=api_ver,domain=app.config['DOMAIN'])
 
 @app.route("/")
 def home():
