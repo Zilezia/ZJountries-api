@@ -75,18 +75,12 @@ a {
     margin-left: 16.125em;
     margin-top: 2em;
 }
-.pr_links {
+.pr_links, .pr_links:visited {
     color: #7076f1;
 }
-.pr_links:hover {
+.pr_links:hover, .pr_links:hover:visited {
     color: #535bf2;
 }
-/* .pr_links:visited {
-    color: rgb(155, 89, 216)
-}
-.pr_links:hover:visited {
-    color: #702aa8;
-} */
 
 .main_section {
     margin-left: 2em;
