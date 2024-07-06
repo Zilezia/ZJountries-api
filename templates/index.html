@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ url_for('static', filename='styles.css') }}" type="text/css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
     <title>ZJountries-api</title>
 </head>
 <body id="root">
     
     <nav class="sidebar">
-        <h1 class="title">ZJountries-api</h1>
+        <h1 class="sb_title"><span style="color: #c120d4;">ZJ</span>ountries-api</h1>
 
-        <a class="sect_link" href="#about">About</a>
-        <a class="sect_link" href="#all">All</a>
-        <a class="sect_link" href="#name">Name</a>
-        <a class="sect_link" href="#iso">ISO Codes</a>
-        <a class="sect_link" href="#multiple">Multiple</a>
-        <a class="sect_link" href="#github">Github</a>
+        <a class="menu_link" href="#about">About</a>
+        <a class="menu_link" href="#all">All</a>
+        <a class="menu_link" href="#name">Name</a>
+            <a class="sub_menu_link" href="#fulltext">Fulltext</a>
+        <a class="menu_link" href="#iso">ISO Codes</a>
+        <a class="menu_link" href="#multiple">Multiple</a>
+        <a class="menu_link" href="#github">Github</a>
+
 
     </nav>
     
     <main class="main">
+        <h1 class="main_title"><span style="color: #c120d4;">ZJ</span>ountries-api</h1>
         <!-- <p>code: <a href="https://github.com/Zilezia/ZJountries-api">https://github.com/Zilezia/ZJountries-api</a></p> -->
 
         <!-- <section id="tests" class="section_cont">
@@ -44,9 +50,15 @@
 
         <section id="name" class="main_section">
             <h2 class="section_title">Name:</h2>
-            <p class="n_text">Call any place by its name</p>
+            <p class="n_text">Call any country by their name</p>
             <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/name={name}</code>
             <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/name=poland" target="_blank">/{{ api_ver }}/name=poland</a></p>
+            <section id="fulltext" class="sub_section">
+                <h3 class="section_title">Fulltext</h3>
+                <p class="n_text">Call a country by their full name.</p>
+                <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/name={name}?fulltext=true</code>
+                <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/name=poland?fulltext=true" target="_blank">/{{ api_ver }}/name=poland?fulltext=true</a></p>
+        </section>
         </section>
         
         <section id="iso-codes" class="main_section">

@@ -4,9 +4,12 @@
     padding: 0;
 }
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    font-family: "Spline Sans", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
+    font-style: normal;
+
+    line-height: 1.5;
     
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
@@ -25,61 +28,61 @@ a {
     text-decoration: inherit;
 }
 
-/* h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-} */
-  
-
 #root {
     margin: 0 auto 0 0;
     display: flex;
     flex-direction: row;
-    
     width: 100%;
     min-width: 320px;
     max-width: 1280px;
-
     height: 100vh;
 }
 
 .sidebar {
-    width: 250px;
+    width: 200px;
     height: 100%;
     background-color: #3d3d3d;
-
     border-right: #161616 2px solid;
-
     position: fixed;
-
     display: flex;
     flex-direction: column;
 }
 
-.title {
+.sb_title {
     margin: .5em auto;
 }
 
-.sect_link {
-    margin: .5em 0;
+.main_title {
+    display: none;
+}
+
+.menu_link, .sub_menu_link {
+    margin-top: .5em;
     padding-left: 1.75em;
     padding-top: .25em;
     color: whitesmoke;
 }
-.sect_link:hover {
+.menu_link:hover, .sub_menu_link:hover {
     color: #bebebe;
+}
+
+.sub_menu_link {
+    padding-left: 2.5em;
+    padding-top: 0;
 }
 
 .main {
     flex: 1;
-    margin-left: 16.125em;
+    margin-left: 14em;
+    margin-right: 1.5em;
+    min-width: 400;
     margin-top: 2em;
 }
 .pr_links, .pr_links:visited {
     color: #7076f1;
 }
 .pr_links:hover, .pr_links:hover:visited {
-    color: #535bf2;
+    color: #c120d4;
 }
 
 .main_section {
@@ -95,8 +98,32 @@ a {
     display: block;
     white-space: pre-wrap;
     margin-top: 1.5em;
+    background-color: #2D2D2D;
+    padding: .5em;
 }
 
 .api_link {
     margin-bottom: 1.5em;
+}
+
+@media (max-width: 850px) {
+    .sidebar {
+        display: none;
+    }
+    .main_title {
+        display: block;
+    }
+    .main {
+        margin-left: 1.5em;
+    }
+}
+
+@media (max-width: 620px) {
+    .main {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .main_section, .section_title {
+        margin-left: 0;
+    }   
 }
