@@ -28,22 +28,16 @@
     ],
     "languages": {
       "official": [
-        "Polish",
-        "Belarusian",
-        "Silesian",
-        "Kashubian"
+        "Polish"
       ],
       "spoken": [
         "Polish",
-        "Silesian German",
         "Polish Sign Language",
-        "Old Prussian",
-        "Wymysorys",
-        "Lithuanian",
         "German",
+        "Lithuanian",
         "Silesian",
         "Kashubian",
-        "Esperanto"
+        "Silesian German"
       ]
     },
     "code": {
@@ -86,11 +80,10 @@
         "English"
       ],
       "spoken": [
-        "English",
-        "English",
-        "Shelta",
         "Irish",
-        "Irish Sign Language"
+        "Irish Sign Language",
+        "English",
+        "Shelta"
       ]
     },
     "code": {
@@ -235,7 +228,7 @@
   },
   {
     "name": {
-      "common": "\u00c5land",
+      "common": "Aland",
       "official": "\u00c5land",
       "native": [
         "\u00c5land",
@@ -297,8 +290,12 @@
     },
     "continent": [],
     "languages": {
-      "official": [],
-      "spoken": []
+      "official": [
+        "English"
+      ],
+      "spoken": [
+        "Sercquiais"
+      ]
     },
     "code": {
       "alpha-2": "CQ",
@@ -2440,8 +2437,9 @@
     "continent": [
       "Europe",
       "Africa",
-      "Americas",
-      "Insular Oceania",
+      "North America",
+      "South America",
+      "Oceania",
       "Antarctica"
     ],
     "languages": {
@@ -8618,7 +8616,7 @@
     },
     "continent": [
       "North America",
-      "Insular Oceania",
+      "Oceania",
       "Asia"
     ],
     "languages": {
@@ -10737,7 +10735,7 @@
       "flag": ""
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -10789,7 +10787,7 @@
       "flag": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Honiara.svg"
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -10903,7 +10901,7 @@
       "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Flag_of_NCD.svg"
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -11800,7 +11798,7 @@
       "flag": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Flag_of_Port_Vila.svg"
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -11967,7 +11965,7 @@
     },
     "continent": [
       "Asia",
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -12726,7 +12724,7 @@
       "flag": ""
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -12784,7 +12782,7 @@
       "flag": "https://upload.wikimedia.org/wikipedia/commons/0/07/Majuro_Atoll_Flag.svg"
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -12827,7 +12825,7 @@
       "flag": ""
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -12874,7 +12872,7 @@
       "flag": ""
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -12919,7 +12917,7 @@
       "flag": ""
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -12963,7 +12961,7 @@
       "flag": ""
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -13006,7 +13004,7 @@
       "flag": ""
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -13048,7 +13046,7 @@
       "flag": ""
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -13093,7 +13091,7 @@
       "flag": ""
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [
@@ -14210,7 +14208,7 @@
       "flag": ""
     },
     "continent": [
-      "Insular Oceania",
+      "Oceania",
       "North America"
     ],
     "languages": {
@@ -14882,7 +14880,7 @@
       "flag": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Flag_of_Papeete%2C_France_%28FP%29.png"
     },
     "continent": [
-      "Insular Oceania"
+      "Oceania"
     ],
     "languages": {
       "official": [

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZJountries-api</title>
     <link href="{{ url_for('static', filename='styles.css') }}" type="text/css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
-    <title>ZJountries-api</title>
 </head>
 <body id="root">
     
@@ -18,7 +18,11 @@
         <a class="menu_link" href="#all">All</a>
         <a class="menu_link" href="#name">Name</a>
             <a class="sub_menu_link" href="#fulltext">Fulltext</a>
-        <a class="menu_link" href="#iso">ISO Codes</a>
+        <a class="menu_link" href="#continent">Continent</a>
+        <a class="menu_link" href="#iso-codes">ISO Codes</a>
+        <a class="menu_link" href="#language">Language</a>
+            <a class="sub_menu_link" href="#official_lang">Official</a>
+            <a class="sub_menu_link" href="#spoken_lang">Spoken</a>
         <a class="menu_link" href="#multiple">Multiple</a>
         <a class="menu_link" href="#github">Github</a>
 
@@ -58,9 +62,18 @@
                 <p class="n_text">Call a country by their full name.</p>
                 <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/name={name}?fulltext=true</code>
                 <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/name=poland?fulltext=true" target="_blank">/{{ api_ver }}/name=poland?fulltext=true</a></p>
-        </section>
+            </section>
         </section>
         
+        <section id="continent" class="main_section">
+            <h2 class="section_title">Continent:</h2>
+            
+            <p class="n_text">Call countries that are in a continent</p>
+            
+            <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/continent={continent}</code>
+            <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/continent=europe" target="_blank">/{{ api_ver }}/continent=europe</a></p>    
+        </section>
+
         <section id="iso-codes" class="main_section">
             <h2 class="section_title">ISO codes:</h2>
             
@@ -76,9 +89,33 @@
             <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/isoN=616" target="_blank">/{{ api_ver }}/isoN=616</a></p>    
         </section>
         
+        <section id="language" class="main_section">
+            <h2 class="section_title">Language:</h2>
+            
+            <p class="n_text">Call countries that speak whatever language.</p>
+            
+            <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/language={lang}</code>
+            <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/language=polish" target="_blank">/{{ api_ver }}/language=polish</a></p>
+            
+            <section id="official_lang" class="sub_section">
+                <h3 class="section_title">Official</h3>
+                <p class="n_text">Calls those who's that language is official.</p>
+                <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/language={lang}?official=true</code>
+                <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/language=polish?official=true" target="_blank">/{{ api_ver }}/language=polish?official=true</a></p>
+            </section>
+            <section id="spoken_lang" class="sub_section">
+                <h3 class="section_title">Spoken</h3>
+                <p class="n_text">Calls those who's that language is spoken casually.</p>
+                <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/language={lang}?spoken=true</code>
+                <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/language=polish?spoken=true" target="_blank">/{{ api_ver }}/language=polish?spoken=true</a></p>
+            </section>
+        </section>
+
         <section id="multiple" class="main_section">
             <h2 class="section_title">Multiple</h2>
-            <p class="n_text">Can call multiple places at once, seperation is: <code>,</code></p>
+            
+            <p class="n_text">Can call multiple places at once, separate with: <code>,</code></p>
+            
             <code class="codeblocks">https://{{ domain }}/{{ api_ver }}/iso2={alpha2},{alpha2},{alpha2}</code>
             <p class="api_link"><a class="pr_links" href="/{{ api_ver }}/iso2=pl,ca,de" target="_blank">/{{ api_ver }}/iso2=pl,ca,de</a></p>    
         </section>
