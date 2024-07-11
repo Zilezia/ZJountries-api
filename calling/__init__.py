@@ -1,4 +1,5 @@
-from .name import CountryName
-from .continent import Continent
-from .iso_codes import ISO2Code, ISO3Code, ISONumCode
-from .language import Language
+from .main.all import All
+from .main.continent import Continent
+from .main.iso_codes import ISO2Code, ISO3Code, ISONumCode
+from .main.language import Language
+from .main.name import CountryName
