@@ -382,11 +382,10 @@
         "Estonian"
       ],
       "spoken": [
+        "Estonian",
         "Estonian Sign Language",
         "Russian",
-        "Estonian",
         "V\u00f5ro",
-        "Standard Estonian",
         "Seto"
       ]
     },
@@ -430,8 +429,8 @@
         "Danish"
       ],
       "spoken": [
-        "Danish",
-        "Faroese"
+        "Faroese",
+        "Danish"
       ]
     },
     "code": {
@@ -478,107 +477,13 @@
         "Swedish"
       ],
       "spoken": [
-        "Finnish Kalo",
-        "Finland-Swedish Sign Language",
-        "Skolt Sami",
-        "Me\u00e4nkieli",
-        "Finnish Sign Language",
-        "Inari Sami",
-        "Karelian",
-        "Northern Sami",
-        "Karelian Proper language",
         "Finnish",
         "Swedish",
-        "Russian",
-        "Estonian",
-        "Arabic",
-        "English",
-        "Somali",
-        "Kurdish",
-        "Persian",
-        "Chinese",
-        "Albanian",
-        "Vietnamese",
-        "Thai",
-        "Turkish",
-        "Spanish",
-        "German",
-        "Polish",
-        "Ukrainian",
-        "Romanian",
-        "Filipino",
-        "French",
-        "Bangla",
-        "Nepali",
-        "Urdu",
-        "Portuguese",
-        "Hungarian",
-        "Italian",
-        "Bulgarian",
-        "Hindi",
-        "Bosnian",
-        "Swahili",
-        "Latvian",
-        "Tamil",
         "S\u00e1mi",
-        "Dutch",
-        "Greek",
-        "Japanese",
-        "Amharic",
-        "Lithuanian",
-        "Tigrinya",
-        "Serbo-Croatian",
-        "Pashto",
-        "Punjabi",
-        "Kinyarwanda",
-        "Telugu",
-        "Uzbek",
-        "Yoruba",
-        "Lingala",
-        "Igbo",
-        "Korean",
-        "Czech",
-        "Norwegian",
-        "Burmese",
-        "Serbian",
-        "Danish",
-        "Twi",
-        "Slovak",
-        "Malayalam",
-        "Marathi",
-        "Turkmen",
-        "Akan",
-        "Croatian",
-        "Macedonian",
-        "Wolof",
-        "Kannada",
-        "Gikuyu",
-        "Hausa",
-        "Belarusian",
-        "Tatar",
-        "Icelandic",
-        "Slovene",
-        "Kazakh",
-        "Ewe",
-        "Catalan",
-        "Afrikaans",
-        "Sindhi",
-        "Odia",
-        "Kyrgyz",
-        "Mongolian",
-        "Lao",
-        "Tajik",
-        "Afar",
-        "Kashmiri",
-        "Maltese",
-        "Ido",
-        "Bambara",
-        "Ossetian",
-        "Zulu",
-        "Assamese",
-        "Faroese",
-        "Irish",
-        "Sundanese"
+        "Karelian",
+        "Finnish Kalo",
+        "Finnish Sign Language",
+        "Finland-Swedish Sign Language"
       ]
     },
     "code": {
@@ -677,9 +582,10 @@
   {
     "name": {
       "common": "Lithuania",
-      "official": "Lithuania",
+      "official": "Republik of Lithuania",
       "native": [
-        "Lietuva"
+        "Lietuva",
+        "Lietuvos Respublika"
       ]
     },
     "population": "2,860,002",
@@ -689,11 +595,13 @@
     "flag": "https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.svg",
     "capital": {
       "name": {
-        "common": "",
-        "native": []
+        "common": "Vilnius",
+        "native": [
+          "Vilnius"
+        ]
       },
-      "population": "0",
-      "flag": ""
+      "population": "602,430",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vilnius.svg"
     },
     "continent": [
       "Europe"
@@ -703,9 +611,9 @@
         "Lithuanian"
       ],
       "spoken": [
-        "Samogitian",
         "Lithuanian",
         "Lithuanian Sign Language",
+        "Samogitian",
         "Russian",
         "Karaim"
       ]
@@ -719,8 +627,9 @@
   {
     "name": {
       "common": "Norway",
-      "official": "Norway",
+      "official": "Kingdom of Norway",
       "native": [
+        "Norge",
         "Kongeriket Norge",
         "Kongeriket Noreg"
       ]
@@ -747,16 +656,16 @@
     "languages": {
       "official": [
         "Bokm\u00e5l",
-        "S\u00e1mi",
         "Nynorsk",
-        "Norwegian"
+        "Norwegian",
+        "S\u00e1mi"
       ],
       "spoken": [
+        "Norwegian",
         "Norwegian Sign Language",
         "Kven",
         "Rodi",
         "Ume Sami",
-        "Norwegian",
         "Southern Sami",
         "Northern Sami"
       ]
@@ -775,14 +684,14 @@
         "Svalbard and Jan Mayen"
       ]
     },
-    "population": "0",
+    "population": "2,530",
     "demonym": [
       "From Svalbard and Jan Mayen"
     ],
     "flag": "",
     "capital": {
       "name": {
-        "common": "no value",
+        "common": "",
         "native": []
       },
       "population": "0",
@@ -808,9 +717,10 @@
   {
     "name": {
       "common": "Sweden",
-      "official": "Sweden",
+      "official": "Kingdom of Sweden",
       "native": [
-        "Sverige"
+        "Sverige",
+        "Konungariket Sverige"
       ]
     },
     "population": "10,551,707",
@@ -836,9 +746,7 @@
         "Swedish",
         "S\u00e1mi",
         "Finnish",
-        "Me\u00e4nkieli",
-        "Romani",
-        "Yiddish"
+        "Me\u00e4nkieli"
       ],
       "spoken": [
         "Swedish",
@@ -849,9 +757,7 @@
         "Southern Sami",
         "Pite Sami",
         "Me\u00e4nkieli",
-        "Northern Sami",
-        "Tavringer Romani",
-        "Yiddish"
+        "Northern Sami"
       ]
     },
     "code": {
@@ -891,7 +797,6 @@
         "Ukrainian"
       ],
       "spoken": [
-        "Russian",
         "Ukrainian",
         "Eastern Yiddish",
         "Ukrainian Sign Language",
@@ -902,7 +807,8 @@
         "Krymchak",
         "Hungarian",
         "Moldovan",
-        "Romani"
+        "Romani",
+        "Russian"
       ]
     },
     "code": {
@@ -914,7 +820,7 @@
   {
     "name": {
       "common": "Slovakia",
-      "official": "Slovakia",
+      "official": "Slovak Republic",
       "native": [
         "Slovensk\u00e1 republika"
       ]
@@ -946,9 +852,9 @@
         "Slovak"
       ],
       "spoken": [
+        "Slovak",
         "Slovak Sign Language",
         "Polish",
-        "Slovak",
         "Ukrainian",
         "Rusyn",
         "Hungarian"
@@ -981,7 +887,7 @@
         ]
       },
       "population": "1,716,961",
-      "flag": ""
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/5/55/ROU_Bucharest_Flag.svg"
     },
     "continent": [
       "Europe"
@@ -992,8 +898,8 @@
       ],
       "spoken": [
         "Romanian",
-        "Vlax Romani",
         "Romanian Sign Language",
+        "Vlax Romani",
         "Ukrainian",
         "Romani",
         "Hungarian"
@@ -1008,10 +914,10 @@
   {
     "name": {
       "common": "Moldova",
-      "official": "Moldova",
+      "official": "Republic of Moldova",
       "native": [
-        "Republica Moldova",
-        "Moldova"
+        "Moldova",
+        "Republica Moldova"
       ]
     },
     "population": "2,603,813",
@@ -1035,7 +941,6 @@
     ],
     "languages": {
       "official": [
-        "Moldovan",
         "Moldovan",
         "Romanian"
       ],
@@ -1084,10 +989,10 @@
         "Hungarian"
       ],
       "spoken": [
-        "Slovak",
-        "Slovene",
         "Hungarian",
-        "Hungarian Sign Language"
+        "Hungarian Sign Language",
+        "Slovak",
+        "Slovene"
       ]
     },
     "code": {
@@ -1098,9 +1003,10 @@
   },
   {
     "name": {
-      "common": "Czech Republic",
+      "common": "Czechia",
       "official": "Czech Republic",
       "native": [
+        "\u010csko",
         "\u010cesk\u00e1 republika"
       ]
     },
@@ -1128,10 +1034,10 @@
       ],
       "spoken": [
         "Czech",
-        "Carpathian Romani",
         "Czech Sign Language",
         "Polish",
-        "German"
+        "German",
+        "Carpathian Romani"
       ]
     },
     "code": {
@@ -1145,7 +1051,8 @@
       "common": "Bulgaria",
       "official": "Republic of Bulgaria",
       "native": [
-        "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f"
+        "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f",
+        "\u0431\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0430\u0020\u0440\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430"
       ]
     },
     "population": "7,000,039",
@@ -1157,7 +1064,7 @@
       "name": {
         "common": "Sofia",
         "native": [
-          "\u0421\u043e\u0301\u0444\u0438\u044f"
+          "\u0421\u043e\u0444\u0438\u044f"
         ]
       },
       "population": "1,400,629",
@@ -1171,8 +1078,8 @@
         "Bulgarian"
       ],
       "spoken": [
-        "Bulgarian Sign Language",
         "Bulgarian",
+        "Bulgarian Sign Language",
         "Turkish",
         "Romani"
       ]
@@ -1188,9 +1095,9 @@
       "common": "Belarus",
       "official": "Republic of Belarus",
       "native": [
+        "\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c",
         "\u0420\u044d\u0441\u043f\u0443\u0431\u043b\u0456\u043a\u0430 \u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c",
-        "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c",
-        "\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c"
+        "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c"
       ]
     },
     "population": "9,155,978",
@@ -1233,8 +1140,8 @@
       "common": "Kazakhstan",
       "official": "Kazakhstan",
       "native": [
-        "\u049a\u0430\u0437\u0430\u049b\u0441\u0442\u0430\u043d \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0441\u044b",
-        "\u049a\u0430\u0437\u0430\u049b\u0441\u0442\u0430\u043d"
+        "\u049a\u0430\u0437\u0430\u049b\u0441\u0442\u0430\u043d",
+        "\u049a\u0430\u0437\u0430\u049b\u0441\u0442\u0430\u043d \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0441\u044b"
       ]
     },
     "population": "19,002,586",
@@ -1247,17 +1154,16 @@
       "name": {
         "common": "Astana",
         "native": [
-          "\u041d\u04b1\u0440-\u0421\u04b1\u043b\u0442\u0430\u043d",
           "\u0410\u0441\u0442\u0430\u043d\u0430",
           "\u0410\u049b\u043c\u043e\u043b\u0430",
-          "\u0410\u0441\u0442\u0430\u043d\u0430"
+          "\u0410\u0441\u0442\u0430\u043d\u0430",
+          "\u041d\u04b1\u0440-\u0421\u04b1\u043b\u0442\u0430\u043d"
         ]
       },
       "population": "1,078,362",
       "flag": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Astana%2C_Kazakhstan.svg"
     },
     "continent": [
-      "Europe",
       "Asia"
     ],
     "languages": {
@@ -1468,14 +1374,13 @@
       "common": "Albania",
       "official": "Republic of Albania",
       "native": [
-        "Republika e Shqip\u00ebris\u00eb",
-        "\u0391\u03bb\u03b2\u03b1\u03bd\u03af\u03b1"
+        "\u0391\u03bb\u03b2\u03b1\u03bd\u03af\u03b1",
+        "Republika e Shqip\u00ebris\u00eb"
       ]
     },
     "population": "2,793,592",
     "demonym": [
-      "Albanian",
-      "Albanians"
+      "Albanian"
     ],
     "flag": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg",
     "capital": {
@@ -1497,12 +1402,12 @@
         "Albanian"
       ],
       "spoken": [
+        "Albanian",
+        "Albanian Sign Language",
+        "Greek",
+        "Modern Greek",
         "Tosk",
         "Gheg",
-        "Albanian Sign Language",
-        "Albanian",
-        "Modern Greek",
-        "Greek",
         "Aromanian"
       ]
     },
@@ -1517,7 +1422,8 @@
       "common": "Andorra",
       "official": "Principality of Andorra",
       "native": [
-        "Andorra"
+        "Andorra",
+        "Principat d'Andorra"
       ]
     },
     "population": "85,101",
@@ -1533,7 +1439,7 @@
         ]
       },
       "population": "24,042",
-      "flag": ""
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Andorra_la_Vella.svg"
     },
     "continent": [
       "Europe"
@@ -1543,8 +1449,8 @@
         "Catalan"
       ],
       "spoken": [
-        "Spanish",
         "Catalan",
+        "Spanish",
         "French"
       ]
     },
@@ -1556,11 +1462,11 @@
   },
   {
     "name": {
-      "common": "Bosnia and Herzegovina",
+      "common": "Bosnia",
       "official": "Bosnia and Herzegovina",
       "native": [
-        "Bosna i Hercegovina",
-        "Bosna i Hercegovina"
+        "\u0411\u043e\u0441\u043d\u0430",
+        "\u0411\u043e\u0441\u043d\u0430\u0020\u0438\u0020\u0425\u0435\u0440\u0446\u0435\u0433\u043e\u0432\u0438\u043d\u0430"
       ]
     },
     "population": "3,816,459",
@@ -1573,8 +1479,6 @@
       "name": {
         "common": "Sarajevo",
         "native": [
-          "Sarajevo",
-          "Sarajevo",
           "\u0421\u0430\u0440\u0430\u0458\u0435\u0432\u043e"
         ]
       },
@@ -1591,9 +1495,9 @@
         "Serbian"
       ],
       "spoken": [
+        "Bosnian",
         "Croatian",
-        "Serbian",
-        "Bosnian"
+        "Serbian"
       ]
     },
     "code": {
@@ -1607,8 +1511,8 @@
       "common": "Croatia",
       "official": "Republic of Croatia",
       "native": [
-        "Republika Hrvatska",
-        "Hrvatska"
+        "Hrvatska",
+        "Republika Hrvatska"
       ]
     },
     "population": "3,871,833",
@@ -1635,12 +1539,12 @@
       ],
       "spoken": [
         "Croatian",
-        "Serbian",
-        "Sinte Romani",
         "Croatian Sign Language",
-        "Italian",
-        "Istriot",
+        "Serbian",
         "Bosnian",
+        "Italian",
+        "Sinte Romani",
+        "Istriot",
         "Istro-Romanian"
       ]
     },
@@ -1655,7 +1559,6 @@
       "common": "Gibraltar",
       "official": "Gibraltar",
       "native": [
-        "Gibraltar",
         "Gibraltar"
       ]
     },
@@ -1668,7 +1571,6 @@
       "name": {
         "common": "Gibraltar",
         "native": [
-          "Gibraltar",
           "Gibraltar"
         ]
       },
@@ -1684,8 +1586,8 @@
       ],
       "spoken": [
         "English",
-        "English",
-        "Spanish"
+        "Spanish",
+        "Llanito"
       ]
     },
     "code": {
@@ -1697,10 +1599,10 @@
   {
     "name": {
       "common": "Greece",
-      "official": "Greece",
+      "official": "Hellenic Republic",
       "native": [
-        "\u0395\u03bb\u03bb\u03ac\u03b4\u03b1",
         "\u0395\u03bb\u03bb\u03ac\u03c2",
+        "\u0395\u03bb\u03bb\u03ac\u03b4\u03b1",
         "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ae \u0394\u03b7\u03bc\u03bf\u03ba\u03c1\u03b1\u03c4\u03af\u03b1"
       ]
     },
@@ -1717,7 +1619,7 @@
         ]
       },
       "population": "643,452",
-      "flag": ""
+      "flag": "https://upload.wikimedia.org/wikipedia/en/5/51/Flag_of_Athens%2C_Greece-en.svg"
     },
     "continent": [
       "Europe"
@@ -1731,17 +1633,17 @@
       "spoken": [
         "Greek",
         "Modern Greek",
-        "Tosk",
-        "Tsakonian",
-        "Cappadocian Greek",
         "Greek Sign Language",
+        "Cappadocian Greek",
         "Romano-Greek",
-        "Turkish",
-        "Ancient Greek",
-        "Bulgarian",
         "Pontic Greek",
+        "Ancient Greek",
+        "Turkish",
+        "Bulgarian",
         "Macedonian",
         "Megleno-Romanian",
+        "Tsakonian",
+        "Tosk",
         "Aromanian",
         "Arvanitic"
       ]
@@ -1754,11 +1656,13 @@
   },
   {
     "name": {
-      "common": "Vatican City",
+      "common": "Vatican",
       "official": "Vatican City",
       "native": [
         "Citt\u00e0 del Vaticano",
-        "Civitas Vaticana"
+        "Civitas Vaticana",
+        "Stato della Citt\u00e0 del Vaticano",
+        "Status Civitatis Vaticanae"
       ]
     },
     "population": "764",
@@ -1768,11 +1672,14 @@
     "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_the_Vatican_City_%282001%E2%80%932023%29.svg",
     "capital": {
       "name": {
-        "common": "no value",
-        "native": []
+        "common": "Vatican City",
+        "native": [
+          "Citt\u00e0 del Vaticano",
+          "Civitas Vaticana"
+        ]
       },
-      "population": "0",
-      "flag": ""
+      "population": "764",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_the_Vatican_City_%282001%E2%80%932023%29.svg"
     },
     "continent": [
       "Europe"
@@ -1780,7 +1687,6 @@
     "languages": {
       "official": [
         "Italian",
-        "French",
         "Latin"
       ],
       "spoken": [
@@ -1797,10 +1703,10 @@
   {
     "name": {
       "common": "Italy",
-      "official": "Italy",
+      "official": "Italian Republic",
       "native": [
-        "Repubblica Italiana",
-        "Italia"
+        "Italia",
+        "Repubblica Italiana"
       ]
     },
     "population": "58,850,717",
@@ -1819,8 +1725,7 @@
       "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Rome.svg"
     },
     "continent": [
-      "Europe",
-      "Africa"
+      "Europe"
     ],
     "languages": {
       "official": [
@@ -1828,6 +1733,7 @@
       ],
       "spoken": [
         "Italian",
+        "Italian Sign Language",
         "Emilian",
         "Arb\u00ebresh",
         "Slavomolisano",
@@ -1837,10 +1743,8 @@
         "M\u00f2cheno",
         "Sassarese",
         "Logudorese",
-        "Italian Sign Language",
         "Jud\u00e6o-Italian",
         "Campidanese Sardinian",
-        "International Sign",
         "Ligurian",
         "Slovene",
         "Ladin",
@@ -1868,9 +1772,10 @@
   {
     "name": {
       "common": "Malta",
-      "official": "Malta",
+      "official": "Repulic of Malta",
       "native": [
-        "Malta"
+        "Malta",
+        "Repubblika ta' Malta"
       ]
     },
     "population": "465,292",
@@ -1882,7 +1787,7 @@
       "name": {
         "common": "Valletta",
         "native": [
-          "Belt Valletta"
+          "Il-Belt Valletta"
         ]
       },
       "population": "6,444",
@@ -1897,10 +1802,9 @@
         "English"
       ],
       "spoken": [
-        "English",
-        "English",
         "Maltese",
-        "Maltese Sign Language"
+        "Maltese Sign Language",
+        "English"
       ]
     },
     "code": {
@@ -1915,8 +1819,6 @@
       "official": "Montenegro",
       "native": [
         "Crna Gora",
-        "\u0426\u0440\u043d\u0430 \u0413\u043e\u0440\u0430",
-        "Crna Gora",
         "\u0426\u0440\u043d\u0430 \u0413\u043e\u0440\u0430"
       ]
     },
@@ -1929,7 +1831,7 @@
       "name": {
         "common": "Podgorica",
         "native": [
-          "Montenegro"
+          "\u041f\u043e\u0434\u0433\u043e\u0440\u0438\u0446\u0430"
         ]
       },
       "population": "150,977",
@@ -1947,11 +1849,12 @@
         "Albanian"
       ],
       "spoken": [
-        "Gheg",
-        "Croatian",
+        "Montenegrin",
         "Serbian",
+        "Croatian",
         "Bosnian",
-        "Montenegrin"
+        "Albanian",
+        "Gheg"
       ]
     },
     "code": {
@@ -1963,10 +1866,10 @@
   {
     "name": {
       "common": "Portugal",
-      "official": "Portugal",
+      "official": "Portugese Republic",
       "native": [
-        "Rep\u00fablica Portuguesa",
-        "Portugal"
+        "Portugal",
+        "Rep\u00fablica Portuguesa"
       ]
     },
     "population": "10,347,892",
@@ -2010,10 +1913,10 @@
   {
     "name": {
       "common": "San Marino",
-      "official": "San Marino",
+      "official": "Republic of San Marino",
       "native": [
-        "Repubblica di San Marino",
-        "San Marco"
+        "San Marino",
+        "Repubblica di San Marino"
       ]
     },
     "population": "33,607",
@@ -2039,7 +1942,8 @@
         "Italian"
       ],
       "spoken": [
-        "Italian"
+        "Italian",
+        "Romagnol"
       ]
     },
     "code": {
@@ -2051,9 +1955,10 @@
   {
     "name": {
       "common": "Serbia",
-      "official": "Serbia",
+      "official": "Republic of Serbia",
       "native": [
-        "\u0421\u0440\u0431\u0438\u0458\u0430"
+        "\u0421\u0440\u0431\u0438\u0458\u0430",
+        "\u0420\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0020\u0421\u0440\u0431\u0438\u0458\u0430"
       ]
     },
     "population": "7,022,268",
@@ -2065,8 +1970,7 @@
       "name": {
         "common": "Belgrade",
         "native": [
-          "\u0411\u0435\u043e\u0433\u0440\u0430\u0434",
-          "Beograd"
+          "\u0411\u0435\u043e\u0433\u0440\u0430\u0434"
         ]
       },
       "population": "1,197,714",
@@ -2081,17 +1985,17 @@
       ],
       "spoken": [
         "Serbian",
-        "Gheg",
+        "Serbo-Croatian",
+        "Croatian",
+        "Hungarian",
+        "Romanian",
+        "Bulgarian",
+        "Slovak",
         "Sinte Romani",
         "Balkan Romani",
         "Romano-Serbian",
         "Yugoslav Sign Language",
-        "Croatian",
-        "Romanian",
-        "Bulgarian",
-        "Slovak",
-        "Serbo-Croatian",
-        "Hungarian"
+        "Gheg"
       ]
     },
     "code": {
@@ -2103,9 +2007,10 @@
   {
     "name": {
       "common": "Slovenia",
-      "official": "Slovenia",
+      "official": "Republic of Slovenia",
       "native": [
-        "Slovenija"
+        "Slovenija",
+        "Republika Slovenija"
       ]
     },
     "population": "2,066,880",
@@ -2129,9 +2034,7 @@
     ],
     "languages": {
       "official": [
-        "Slovene",
-        "Italian",
-        "Hungarian"
+        "Slovene"
       ],
       "spoken": [
         "Slovene",
@@ -2150,6 +2053,7 @@
       "common": "Spain",
       "official": "Kingdom of Spain",
       "native": [
+        "Espa\u00f1a",
         "Reino de Espa\u00f1a"
       ]
     },
@@ -2207,9 +2111,12 @@
   {
     "name": {
       "common": "North Macedonia",
-      "official": "North Macedonia",
+      "official": "Republic of North Macedonia",
       "native": [
-        "\u0420\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0421\u0435\u0432\u0435\u0440\u043d\u0430 \u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0438\u0458\u0430"
+        "\u0421\u0435\u0432\u0435\u0440\u043d\u0430\u0020\u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0438\u0458\u0430",
+        "Maqedonisë së Veriut",
+        "\u0420\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0421\u0435\u0432\u0435\u0440\u043d\u0430 \u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0438\u0458\u0430",
+        "Republika e Maqedonis\u00eb s\u00eb Veriut"
       ]
     },
     "population": "1,836,713",
@@ -2221,7 +2128,8 @@
       "name": {
         "common": "Skopje",
         "native": [
-          "\u0421\u043a\u043e\u043f\u0458\u0435"
+          "\u0421\u043a\u043e\u043f\u0458\u0435",
+          "Shkupi"
         ]
       },
       "population": "526,502",
@@ -2237,9 +2145,10 @@
       ],
       "spoken": [
         "Macedonian",
-        "Gheg",
+        "Albanian",
         "Serbian",
         "Megleno-Romanian",
+        "Gheg",
         "Aromanian"
       ]
     },
@@ -2252,11 +2161,12 @@
   {
     "name": {
       "common": "Kosovo",
-      "official": "Kosovo",
+      "official": "Republic of Kosovo",
       "native": [
+        "Kosov\u00ebs",
+        "\u041a\u043e\u0441\u043e\u0432\u043e",
         "Republika e Kosov\u00ebs",
-        "\u0420\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u043e\u0441\u043e\u0432\u043e",
-        "Republika Kosovo"
+        "\u0420\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u043e\u0441\u043e\u0432\u043e"
       ]
     },
     "population": "1,883,018",
@@ -2269,7 +2179,8 @@
       "name": {
         "common": "Pristina",
         "native": [
-          "Prishtin\u00eb"
+          "Prishtin\u00eb",
+          "\u041f\u0440\u0438\u0448\u0442\u0438\u043d\u0430"
         ]
       },
       "population": "198,897",
@@ -2299,8 +2210,8 @@
       "common": "Austria",
       "official": "Republic of Austria",
       "native": [
-        "Republik \u00d6sterreich",
-        "\u00d6sterreich"
+        "\u00d6sterreich",
+        "Republik \u00d6sterreich"
       ]
     },
     "population": "8,979,894",
@@ -2351,6 +2262,9 @@
       "common": "Belgium",
       "official": "Kingdom of Belgium",
       "native": [
+        "Belgi\u00eb",
+        "Belgique",
+        "Belgien",
         "Koninkrijk Belgi\u00eb",
         "Royaume de Belgique",
         "K\u00f6nigreich Belgien"
@@ -2383,25 +2297,23 @@
         "German"
       ],
       "spoken": [
-        "West Flemish",
-        "Limburgish",
-        "Flemish Sign Language",
-        "French Belgian Sign Language",
         "Dutch",
         "Luxembourgish",
         "German",
         "French",
+        "Flemish",
+        "Limburgish",
+        "Belgian Dutch",
+        "Belgian French",
+        "Brusselian",
+        "Flemish Sign Language",
+        "French Belgian Sign Language",
+        "German Sign Language",
+        "West Flemish",
         "Picard",
         "Walloon",
         "Champenois",
         "Lorrain",
-        "Low Dietsch dialects",
-        "Flemish",
-        "Belgian Dutch",
-        "Belgian French",
-        "Brusselian",
-        "Yiddish",
-        "German Sign Language",
         "Sinte Romani"
       ]
     },
@@ -2414,8 +2326,9 @@
   {
     "name": {
       "common": "France",
-      "official": "France",
+      "official": "French Republic",
       "native": [
+        "France",
         "R\u00e9publique fran\u00e7aise"
       ]
     },
@@ -2466,8 +2379,8 @@
       "common": "Germany",
       "official": "Federal Republic of Germany",
       "native": [
-        "Bundesrepublik Deutschland",
-        "Deutschland"
+        "Deutschland",
+        "Bundesrepublik Deutschland"
       ]
     },
     "population": "84,358,845",
@@ -2493,25 +2406,25 @@
         "German"
       ],
       "spoken": [
-        "Swabian",
+        "German",
+        "Low German",
+        "German Sign Language",
+        "Danish",
+        "Luxembourgish",
         "Swiss German",
+        "East Frisian Low Saxon",
+        "Upper Saxon",
+        "Swabian",
         "Ripuarian",
         "Saterland Frisian",
         "Yenish",
         "Alemannic",
-        "East Frisian Low Saxon",
-        "Upper Saxon",
         "Main-Franconian",
         "Westphalian",
-        "Luxembourgish",
-        "Danish",
         "Lower Sorbian",
         "Upper Sorbian",
         "Palatinate German",
-        "German",
         "North Frisian",
-        "Low German",
-        "German Sign Language",
         "Western Yiddish"
       ]
     },
@@ -2524,11 +2437,14 @@
   {
     "name": {
       "common": "Luxembourg",
-      "official": "Luxembourg",
+      "official": "Grand Duchy of Luxembourg",
       "native": [
         "L\u00ebtzebuerg",
         "Luxembourg",
-        "Luxemburg"
+        "Luxemburg",
+        "Groussherzogtum L\u00ebtzebuerg",
+        "Grand-Duch\u00e9 de Luxembourg",
+        "Gro\u00dfherzogtum Luxemburg"
       ]
     },
     "population": "672,050",
@@ -2542,7 +2458,7 @@
       "name": {
         "common": "Luxembourg",
         "native": [
-          "Stad L\u00ebtzebuerg",
+          "L\u00ebtzebuerg",
           "Luxembourg",
           "Luxemburg"
         ]
@@ -2561,8 +2477,8 @@
       ],
       "spoken": [
         "Luxembourgish",
-        "German",
-        "French"
+        "French",
+        "German"
       ]
     },
     "code": {
@@ -2574,13 +2490,12 @@
   {
     "name": {
       "common": "Monaco",
-      "official": "Monaco",
+      "official": "Principality of Monaco",
       "native": [
-        "Principaut\u00e9 de Monaco",
-        "Prin\u00e7ipato de M\u00f3nego",
         "Monaco",
-        "Prin\u00e7ipatu de Mu\u030dnegu",
-        "Principat de M\u00f3negue"
+        "M\u00f9negu",
+        "Principaut\u00e9 de Monaco",
+        "Prin\u00e7ipatu de M\u00f9negu"
       ]
     },
     "population": "38,350",
@@ -2594,7 +2509,8 @@
       "name": {
         "common": "Monaco City",
         "native": [
-          "Monaco-Ville"
+          "Monaco-Ville",
+          "M\u00f9negu Autu"
         ]
       },
       "population": "0",
@@ -2608,7 +2524,10 @@
         "French"
       ],
       "spoken": [
-        "French"
+        "French",
+        "Mon\u00e9gasque",
+        "Italian",
+        "Ligurian"
       ]
     },
     "code": {
@@ -2620,10 +2539,10 @@
   {
     "name": {
       "common": "Netherlands",
-      "official": "Netherlands",
+      "official": "Kingdom of the Netherlands",
       "native": [
-        "Koninkrijk der Nederlanden",
-        "Nederland"
+        "Nederland",
+        "Koninkrijk der Nederlanden"
       ]
     },
     "population": "17,590,672",
@@ -2653,7 +2572,12 @@
         "English"
       ],
       "spoken": [
-        "Dutch"
+        "Dutch",
+        "Dutch Low Saxon",
+        "Dutch Sign Language",
+        "Limburgish",
+        "Sinte Romani",
+        "Yiddish"
       ]
     },
     "code": {
@@ -2667,10 +2591,16 @@
       "common": "Switzerland",
       "official": "Swiss Confederation",
       "native": [
+        "Schweiz",
+        "Suisse",
+        "Svizzera",
+        "Svizra",
+        "Helvetia",
         "Schweizerische Eidgenossenschaft",
-        "Conf\u00e9d\u00e9ration suisse",
+        "Conf\u00e9d\u00e9ration Suisse",
         "Confederazione Svizzera",
-        "Confederaziun svizra"
+        "Confederaziun Svizra",
+        "Confoederatio Helvetica"
       ]
     },
     "population": "8,902,308",
@@ -2697,8 +2627,8 @@
     "languages": {
       "official": [
         "German",
-        "Italian",
         "French",
+        "Italian",
         "Romansh"
       ],
       "spoken": [
@@ -2727,7 +2657,9 @@
       "common": "Burundi",
       "official": "Republic of Burundi",
       "native": [
-        "Uburundi"
+        "Uburundi",
+        "Repuburika y\u2019Uburundi",
+        "R\u00e9publique du Burundi"
       ]
     },
     "population": "11,530,580",
@@ -2771,8 +2703,12 @@
       "common": "Comoros",
       "official": "Union of the Comoros",
       "native": [
+        "Komori",
+        "Comores",
+        "\u062c\u0632\u0631\u0020\u0627\u0644\u0642\u0645\u0631",
+        "Udzima wa Komori",
         "Union des Comores",
-        "\u0627\u0644\u0627\u062a\u062d\u0627\u062f \u0627\u0644\u0642\u0645\u0631\u064a"
+        "\u062c\u0645\u0647\u0648\u0631\u064a\u0629\u0020\u0627\u0644\u0642\u0645\u0631\u0020\u0627\u0644\u0645\u062a\u062d\u062f\u0629"
       ]
     },
     "population": "902,348",
@@ -2787,10 +2723,10 @@
       "name": {
         "common": "Moroni",
         "native": [
-          "Comoros"
+          "\u0645\u0648\u0631\u0648\u0646\u064a"
         ]
       },
-      "population": "0",
+      "population": "111,326",
       "flag": ""
     },
     "continent": [
@@ -2799,8 +2735,8 @@
     "languages": {
       "official": [
         "Comorian",
-        "Arabic",
-        "French"
+        "French",
+        "Arabic"
       ],
       "spoken": [
         "Modern Standard Arabic",
@@ -2819,11 +2755,14 @@
   {
     "name": {
       "common": "Djibouti",
-      "official": "Djibouti",
+      "official": "Republic of Djibouti",
       "native": [
+        "\u062c\u064a\u0628\u0648\u062a\u064a",
+        "Djibouti",
+        "Jabuuti",
         "\u062c\u0645\u0647\u0648\u0631\u064a\u0629 \u062c\u064a\u0628\u0648\u062a\u064a",
         "R\u00e9publique de Djibouti",
-        "Jabuuti"
+        "Jamhuuriyadda Jabuuti"
       ]
     },
     "population": "956,985",
@@ -2847,13 +2786,13 @@
     ],
     "languages": {
       "official": [
-        "French",
-        "Arabic"
+        "Arabic",
+        "French"
       ],
       "spoken": [
         "Modern Standard Arabic",
-        "Somali",
         "French",
+        "Somali",
         "Afar"
       ]
     },
@@ -2866,13 +2805,12 @@
   {
     "name": {
       "common": "Eritrea",
-      "official": "Eritrea",
+      "official": "State of Eritrea",
       "native": [
-        "\u062f\u0648\u0644\u0629 \u0625\u0631\u064a\u062a\u0631\u064a\u0627",
-        "\u0625\u0631\u064a\u062a\u0631\u064a\u0627",
         "\u12a4\u122d\u1275\u122b",
-        "\u062f\u0648\u0644\u0629 \u0625\u0631\u062a\u0631\u064a\u0627",
-        "\u0625\u0631\u062a\u0631\u064a\u0627"
+        "\u0625\u0631\u064a\u062a\u0631\u064a\u0627",
+        "\u1203\u1308\u1228\u0020\u12a4\u122d\u1275\u122b",
+        "\u062f\u0648\u0644\u0629 \u0625\u0631\u064a\u062a\u0631\u064a\u0627"
       ]
     },
     "population": "3,497,000",
@@ -2884,11 +2822,12 @@
       "name": {
         "common": "Asmara",
         "native": [
-          "\u12a3\u1235\u1218\u122b"
+          "\u12a3\u1235\u1218\u122b",
+          "\u0623\u0633\u0645\u0631\u0629"
         ]
       },
-      "population": "0",
-      "flag": "https://upload.wikimedia.org/wikipedia/commons/7/73/Asmara_coats_of_arms_with_transparent_background.png"
+      "population": "1,073,000",
+      "flag": ""
     },
     "continent": [
       "Africa"
@@ -2900,16 +2839,16 @@
         "English"
       ],
       "spoken": [
+        "Tigrinya",
         "Modern Standard Arabic",
-        "Blin",
         "English",
+        "Blin",
         "Kunama",
         "Saho",
         "Nara",
         "Afar",
         "Beja",
         "Dahalik",
-        "Tigrinya",
         "Tigre"
       ]
     },
