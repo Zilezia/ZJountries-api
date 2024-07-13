@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, render_template, request
-from flask_restful import Resource, Api
+from flask import Flask, render_template
+from flask_restful import Api
 import pandas as pd
 
 from config import Config
@@ -27,6 +27,7 @@ api.add_resource(All, f"/{api_ver}/all")
 # geo
 api.add_resource(CountryName, f"/{api_ver}/name=<string:names>")
 api.add_resource(Continent, f"/{api_ver}/continent=<string:continents>")
+api.add_resource(CapitalName, f"/{api_ver}/capital=<string:capitals>")
 # iso
 api.add_resource(ISO2Code, f"/{api_ver}/iso2=<string:alpha2s>")
 api.add_resource(ISO3Code, f"/{api_ver}/iso3=<string:alpha3s>")
