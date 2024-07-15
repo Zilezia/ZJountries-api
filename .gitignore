@@ -1,3 +1,7 @@
+# stuff like that
 .git
 __pycache__
 .venv
+
+# these are my testing data scraping/cleaning
+data/prev

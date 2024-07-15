@@ -10,6 +10,7 @@ properties:
   capital: P36
   continent: P30
   regions: P150
+
   part_of: P361
   # coord_loc: P625 # might get it for later versions
 
@@ -18,12 +19,20 @@ properties:
 
   official_religion: P3075
 
+  total_area: P2046
+  water_perc: P2927
+
+  # ISO 3166-1
   alpha_2_code: P297
   alpha_3_code: P298
   numeric_code: P299
+  # ISO 3166-2
+  subdiv_code:  P300
 
 # List of countries/territories
 
+# there should be about 205 instances in this, ill try to have more
+# i just lazily got all the places so there might not be some
 place:
 - https://www.wikidata.org/wiki/Q36 # POLSKA!!!! ⬜🟥
 - https://www.wikidata.org/wiki/Q27

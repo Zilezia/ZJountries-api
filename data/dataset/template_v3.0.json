@@ -1,0 +1,56 @@
+[{
+  "name": {
+    "common": "",
+    "official": "",
+    "native": {
+      "lang": {
+        "common": "",
+        "official": ""
+      }
+    }
+  },
+  
+  "population": "",
+  
+  "flag": "",
+  
+  "capital": {
+    "name": {
+      "common": "",
+      "native": {
+        "lang": ""
+      }
+    },
+    "population": "",
+    "flag": ""
+  },
+
+  "demonym": [],
+
+  "continents": [],
+  "regions": [],
+
+  "languages": {
+    "official": [],
+    "recognised": []
+  },
+
+  "area": {
+    "total": {
+      "km": "",
+      "mi": ""
+    },
+    "land": {
+      "km": "",
+      "mi": ""
+    },
+    "water%": ""
+  },
+
+  "code": {
+    "alpha-2": "",
+    "alpha-3": "",
+    "numeric": "",
+    "subdiv": ""
+  }
+}]

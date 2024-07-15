@@ -2,7 +2,7 @@ from flask import jsonify, request
 from flask_restful import Resource
 import pandas as pd
 
-from calling.fields.fields_helper import get_fields
+from get.main.fields import get_fields
 
 data = pd.read_json("./data/dataset/data.json").to_dict(orient='records')
 

@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 import json
-import os
 from time import sleep
 import yaml
 
@@ -15,7 +14,7 @@ service = Service(PATH)
 driver = webdriver.Chrome(service=service)
 
 yaml_file_path = "./dataset/imp.yaml"
-json_file_path = "./dataset/data.json"
+json_file_path = "./dataset/data2.json"
 
 with open(yaml_file_path, 'r') as yaml_file:
     imp_data = yaml.safe_load(yaml_file)
@@ -70,12 +69,11 @@ def process_url(proc_url, data):
     except:
         native_names.append(common_name)
     
-    population = '0'
+    population = "0"
     try:
         population_prop = main.find_element(By.ID, prop['population'])
-        population_rows = population_prop.find_elements(By.CLASS_NAME, "wb-preferred")
-        for population_row in population_rows:
-            population = population_row.find_element(By.CLASS_NAME, "wikibase-snakview-value").text
+        population_row = population_prop.find_elements(By.CLASS_NAME, "wb-preferred")
+        population = population_row[0].find_element(By.CLASS_NAME, "wikibase-snakview-value").text
     except:
         pass
     
@@ -104,6 +102,16 @@ def process_url(proc_url, data):
     except:
         pass
     
+    a_part_of = []
+    try:
+        region_prop = main.find_element(By.ID, prop['part_of'])
+        region_items = region_prop.find_elements(By.CLASS_NAME, "listview-item")
+        for region_item in region_items:
+            region_text = region_item.find_element(By.XPATH, './/a').text
+            regions.append(region_text)
+    except:
+        pass
+    
     official_langs = []
     spoken_langs = []
     try:
@@ -124,9 +132,42 @@ def process_url(proc_url, data):
     except:
         pass
     
+    total_area = {"km":"0", "mi":"0"}
+    water_perc = "0"
+    total_land_area = {"km":"0", "mi":"0"}
+    try:
+        total_area_prop = main.find_element(By.ID, prop['total_area'])
+        total_area_row = total_area_prop.find_elements(By.CLASS_NAME, "listview-item")
+        total_area_text = total_area_row[0].find_element(By.CLASS_NAME, "wikibase-snakview-value").text
+        total_area_strip = total_area_text.replace(" square kilometre", "").replace(",", '')
+        
+        ta_km = int(total_area_strip)
+
+        ta_mi = round(ta_km/1.609344)
+
+        total_area["km"] = str('{:,}'.format(ta_km))
+        total_area["mi"] = str('{:,}'.format(ta_mi))
+
+        water_perc_prop = main.find_element(By.ID, prop['water_perc'])
+        water_perc_row = water_perc_prop.find_elements(By.CLASS_NAME, "listview-item")
+        water_perc_text = water_perc_row[0].find_element(By.CLASS_NAME, "wikibase-snakview-value").text
+        
+        water_perc = water_perc_text.replace(" percent", "")
+        
+        water_perc_num = float(water_perc)
+
+        tla_km = round(ta_km - (water_perc_num*ta_km)/100)
+        tla_mi = round(ta_mi - (water_perc_num*ta_mi)/100)
+
+        total_land_area["km"] = str('{:,}'.format(tla_km))
+        total_land_area["mi"] = str('{:,}'.format(tla_mi))
+    except:
+        pass
+    
     alpha_2_code=''
     alpha_3_code=''
     numeric_code=''
+    subdiv_code =''
     try:
         # "body"'s here atm cuz its a dif table than "main"
         alpha_2_prop = body.find_element(By.ID, prop['alpha_2_code'])
@@ -149,6 +190,12 @@ def process_url(proc_url, data):
             numeric_code = numeric_rows[0].find_element(By.CLASS_NAME, "wb-external-id").text
         except:
             numeric_code = numeric_rows[1].find_element(By.CLASS_NAME, "wb-external-id").text
+        try:
+            subdiv_prop = body.find_element(By.ID, prop['subdiv_code'])
+            subdiv_rows = subdiv_prop.find_elements(By.CLASS_NAME, "wb-preferred")
+            subdiv_code = subdiv_rows[0].find_element(By.CLASS_NAME, "wb-external-id").text
+        except:
+            subdiv_code = alpha_2_code
     except:
         pass
     
@@ -275,8 +322,9 @@ def process_url(proc_url, data):
             "official": official_name,
             "native": native_names
         },
+        
         "population": population,
-        "demonym": demonyms,
+        
         "flag": flag_img,
         
         "capital": {
@@ -287,28 +335,34 @@ def process_url(proc_url, data):
             "population": capital_pop,
             "flag": capital_flag
         },
-        "continent": continents,
-        
+        "demonym": demonyms,
+
+        "continents": continents,
+        "part of": a_part_of,
+
         "languages": {
             "official": official_langs,
             "spoken": spoken_langs
         },
-        
+
+        "area": {
+            "total": total_area,
+            "land": total_land_area,
+            "water%": water_perc
+        },
+
         "code": {
             "alpha-2": alpha_2_code,
             "alpha-3": alpha_3_code,
-            "numeric": numeric_code
-        },
+            "numeric": numeric_code,
+            "subdiv": subdiv_code
+        }
     })
     save_to_json(data, json_file_path)
     
-
-# data = load_data(json_file_path)
 data = []
 
 for place_url in imp_data['place']:
     process_url(place_url, data)
-
-# process_url("https://www.wikidata.org/wiki/Q232")
 
 driver.quit()

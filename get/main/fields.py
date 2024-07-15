@@ -1,3 +1,4 @@
+from flask import jsonify
 import pandas as pd
 
 data = pd.read_json("./data/dataset/data.json").to_dict(orient='records')
@@ -17,4 +18,7 @@ def get_fields(fields, data_subset=None):
 
         fields_data.append(record_data)
     
-    return fields_data
+    if fields_data:
+            return fields_data
+    else:
+        return jsonify({"error": "Fields not found."}), 404
