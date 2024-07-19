@@ -1,5 +1,0 @@
-i needa to maybe save some values already saved 
-inside /dataset/data.json into ~/dataset/saved_parts.json
-and then append into newer/updated
-
-or just make the scraper better instead (easier path) (🤯)

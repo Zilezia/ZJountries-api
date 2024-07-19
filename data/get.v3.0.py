@@ -104,11 +104,11 @@ def process_url(proc_url, data):
     
     a_part_of = []
     try:
-        region_prop = main.find_element(By.ID, prop['part_of'])
-        region_items = region_prop.find_elements(By.CLASS_NAME, "listview-item")
-        for region_item in region_items:
-            region_text = region_item.find_element(By.XPATH, './/a').text
-            regions.append(region_text)
+        part_of_prop = main.find_element(By.ID, prop['part_of'])
+        part_of_items = part_of_prop.find_elements(By.CLASS_NAME, "listview-item")
+        for part_of_item in part_of_items:
+            part_of_text = part_of_item.find_element(By.XPATH, './/a').text
+            a_part_of.append(part_of_text)
     except:
         pass
     

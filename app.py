@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 from flask_restful import Api
-import pandas as pd
 
 from config import Config
 from get import *
@@ -22,16 +21,14 @@ def inject_config(): # 2nd version bc icba removing or adding "v"'s
 
 @app.route("/")
 def home():
-    return render_template("index.html")
-# been a slight pause wanted to try to replace ^ this with vite react 
-# but the only annoying part would be updating the version in like 3
-# seperate locations so im just gonna keep this
-
-# oh yeah right i can do the same thing i wished on doing in vite
-# i forgot that it uses jinji so that might actually be better to do
-# i really disliked how big and confusing the file became with all 
-# the sections thats it tbh, all the struggle to have the same 
-# outcome + functionality
+    # thinking either to have this way to load the sections or if it too much
+    components = [
+        'about', 'all', 
+        'name', 'continent', 
+        'iso', 'lang', 
+        'fields', 'mult', 
+    'github']
+    return render_template("doc.html", components=components)
 
 # all
 api.add_resource(All, f"/{api_ver}/all")
