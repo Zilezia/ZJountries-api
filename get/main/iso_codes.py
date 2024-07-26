@@ -1,10 +1,4 @@
-from flask import jsonify, request
-from flask_restful import Resource
-import pandas as pd
-
-from get.main.fields import get_fields
-
-data = pd.read_json("./data/dataset/data.json").to_dict(orient='records')
+from get.fields import *
 
 class ISO2Code(Resource):
     def get(self, alpha2s):

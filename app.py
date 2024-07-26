@@ -12,10 +12,10 @@ api = Api(app)
 api_ver = 'v'+app.config['API_VERSION']
 
 @app.context_processor
-def inject_config(): # 2nd version bc icba removing or adding "v"'s
+def inject_config():
     return dict(
         api_ver=api_ver,
-        api_version=app.config['API_VERSION'],
+        api_version=app.config['API_VERSION'],  # 2nd version bc icba removing or adding "v"'s
         domain=app.config['DOMAIN']
     )
 
@@ -43,4 +43,5 @@ api.add_resource(ISONumCode, f"/{api_ver}/isoN=<string:numerics>")
 # langs
 api.add_resource(Language, f"/{api_ver}/language=<string:languages>")
 
-# api.add_resource(Field, f"/{api_ver}/field=<string:fields>") # kinda unnecessary, works same as /all?field={fields}
+if __name__ == "__main__":
+    app.run(debug=True, port=2137)

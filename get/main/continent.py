@@ -1,10 +1,4 @@
-from flask import jsonify, request
-from flask_restful import Resource
-import pandas as pd
-
-from get.main.fields import get_fields
-
-data = pd.read_json("./data/dataset/data.json").to_dict(orient='records')
+from get.fields import *
 
 class Continent(Resource):
     def get(self, continents):
@@ -25,11 +19,7 @@ class Continent(Resource):
         matching_countries = []
         for continent in continents_list:
             actual_continent = continent_alias.get(continent.lower(), continent)
-            # continent_lower = continent.lower()
-
-            # matches = [country for country in data if continent_lower in [c.lower() for c in country['continent']]]
-            # matches = [country for country in data if continent in country['continent']]
-            matches = [country for country in data if actual_continent in country['continent']]
+            matches = [country for country in data if actual_continent in country['continents']] # continent/s
             matching_countries.extend(matches)
         
         if not matching_countries:

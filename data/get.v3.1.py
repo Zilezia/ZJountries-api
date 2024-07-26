@@ -13,8 +13,8 @@ PATH = "D:\Program Files\chromedriver-win64\chromedriver.exe"
 service = Service(PATH)
 driver = webdriver.Chrome(service=service)
 
-yaml_file_path = "./dataset/imp.yaml"
-json_file_path = "./dataset/data2.json"
+yaml_file_path = "./data/dataset/imp.yaml" # important for scraping data from wikidata
+json_file_path = "./data/dataset/td.json" # save file
 
 with open(yaml_file_path, 'r') as yaml_file:
     imp_data = yaml.safe_load(yaml_file)
@@ -56,19 +56,7 @@ def process_url(proc_url, data):
                 official_name = of_name_spans[0].text
     except:
         pass
-    
-    native_names = []
-    try:
-        native_label_prop = main.find_element(By.ID, prop['native_label'])
-        native_label_rows = native_label_prop.find_elements(By.CLASS_NAME, "listview-item")
-        for native_label_row in native_label_rows:
-            native_label_item = native_label_row.find_element(By.CLASS_NAME, "wikibase-snakview-value")
-            native_label_spans = native_label_item.find_elements(By.TAG_NAME, "span")
-            native_label_text = native_label_spans[0].text
-            native_names.append(native_label_text)
-    except:
-        native_names.append(common_name)
-    
+        
     population = "0"
     try:
         population_prop = main.find_element(By.ID, prop['population'])
@@ -101,7 +89,7 @@ def process_url(proc_url, data):
             continents.append(continent_text)
     except:
         pass
-    
+    # maybe not include
     a_part_of = []
     try:
         part_of_prop = main.find_element(By.ID, prop['part_of'])
@@ -199,6 +187,50 @@ def process_url(proc_url, data):
     except:
         pass
     
+    # Scraped elements that need to go to other ur
+    
+    # moved down cuz bugged the whole thing
+    native_names = {}
+    try:
+        driver.get(f"https://en.wikipedia.org/wiki/{common_name}") 
+        
+        
+        body = WebDriverWait(driver, 50).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "mw-body-content"))
+        )
+        sleep(1)
+        table = body.find_element(By.CLASS_NAME, "infobox")
+        nat_names_row = table.find_element(By.CLASS_NAME, "ib-country-names")
+        # Testing it out this way, works kinda better than before 
+        try:
+            plainlist_div = nat_names_row.find_element(By.XPATH, ".//div[@class='plainlist']")
+        except:
+            plainlist_div = None
+        
+        if plainlist_div:
+            nat_names_list = nat_names_row.find_elements(By.XPATH, ".//ul/li")
+            for nat_name_item in nat_names_list:
+                nat_name = nat_name_item.find_element(By.XPATH, ".//span[1]").text # idk how to find by title it errors out
+                lang_text = nat_name_item.find_element(By.XPATH, ".//span[@class='languageicon']").text
+                nat_lang = lang_text.replace('(', '').replace(')', '').lower()
+                native_names[nat_lang] = nat_name
+            
+        else:
+            nat_name = nat_names_row.find_element(By.XPATH, ".//span[1]").text
+            lang_text = nat_names_row.find_element(By.XPATH, ".//span[@class='languageicon']").text
+            nat_lang = lang_text.replace('(', '').replace(')', '').lower()
+            native_names[nat_lang] = nat_name
+
+        driver.back()
+        # just to slow down, on my laptop it cant load shit fast
+        WebDriverWait(driver, 50).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "mw-body"))
+        )
+        sleep(1)
+        
+    except:
+        native_names["english"] = common_name
+    
     flag_img = ''
     try:
         flag_img_prop = main.find_element(By.ID, prop['flag_img'])
@@ -215,7 +247,7 @@ def process_url(proc_url, data):
         flag_img = flag_img_div.find_element(By.XPATH, './/a').get_attribute('href')
         driver.back()
         WebDriverWait(driver, 50).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "wikibase-listview"))
+            EC.presence_of_element_located((By.CLASS_NAME, ""))
         )
         pass
     except:
@@ -223,6 +255,7 @@ def process_url(proc_url, data):
     
     capital_name = ''
     capital_nn = []
+    # capital_nn = {}
     # capital_loc = ''
     capital_pop = '0'
     capital_flag = ''
@@ -252,7 +285,8 @@ def process_url(proc_url, data):
                 cap_nn_text = cap_nn_spans[0].text
                 capital_nn.append(cap_nn_text)
         except:
-            capital_nn.append(common_name)
+            capital_nn["english"] = common_name
+        # idc about this
         # sleep(1)
         # try:
         #     cap_loc_prop = wdata_cap_page.find_element(By.ID, prop['coord_loc'])
@@ -270,7 +304,7 @@ def process_url(proc_url, data):
                 capital_pop = cap_pop_row.find_element(By.CLASS_NAME, "wikibase-snakview-value").text
         except:
             pass
-
+        
         if wdata_cap_page.find_element(By.ID, prop['flag_img']):
             sleep(1)
             cap_flag_prop = wdata_cap_page.find_element(By.ID, prop['flag_img'])
@@ -326,6 +360,7 @@ def process_url(proc_url, data):
         "population": population,
         
         "flag": flag_img,
+        "demonym": demonyms,
         
         "capital": {
             "name": {
@@ -335,28 +370,35 @@ def process_url(proc_url, data):
             "population": capital_pop,
             "flag": capital_flag
         },
-        "demonym": demonyms,
-
-        "continents": continents,
-        "part of": a_part_of,
-
-        "languages": {
-            "official": official_langs,
-            "spoken": spoken_langs
-        },
-
+        # "cities": [] # in later versions
+        
         "area": {
             "total": total_area,
             "land": total_land_area,
             "water%": water_perc
         },
-
-        "code": {
+        "continents": continents,
+        "part of": a_part_of,
+        
+        "iso-code": {
             "alpha-2": alpha_2_code,
             "alpha-3": alpha_3_code,
             "numeric": numeric_code,
-            "subdiv": subdiv_code
-        }
+            "iso-2": subdiv_code # kinda more specific when comes to territories/not independent countries
+        },
+
+        # "languages": {
+        #     "official": official_langs,
+        #     "spoken": spoken_langs
+        # },
+        # test look v^
+        "official_lang": official_langs,
+        
+        # "religions": religions,
+        # "ethnicities": ethnicities,
+        
+        # ("religions" if religions > 1 else "religion"): religions
+        
     })
     save_to_json(data, json_file_path)
     

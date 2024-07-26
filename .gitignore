@@ -3,5 +3,4 @@
 __pycache__
 .venv
 
-# these are my testing data scraping/cleaning
 data/prev

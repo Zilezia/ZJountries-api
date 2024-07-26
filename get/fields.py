@@ -1,7 +1,11 @@
-from flask import jsonify
-import pandas as pd
+from flask import jsonify, request
+from flask_restful import Resource
+import json
 
-data = pd.read_json("./data/dataset/data.json").to_dict(orient='records')
+# with open("./data/dataset/natn.json") as file: # test file
+# with open("./data/dataset/data2.json") as file:
+with open("./data/dataset/td.json") as file:
+    data = json.load(file)
 
 def get_fields(fields, data_subset=None):
     field_list = fields.split(',')
