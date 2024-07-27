@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from flask_restful import Api
 
 from config import Config
@@ -29,6 +29,10 @@ def home():
         'fields', 'mult', 
     'github']
     return render_template("doc.html", components=components)
+
+@app.route("/version", methods=['GET'])
+def version():
+    return jsonify({"version": app.config['API_VERSION']})
 
 # all
 api.add_resource(All, f"/{api_ver}/all")
