@@ -1,3 +1,3 @@
 class Config:
-    API_VERSION = "0.9.8.1"
+    API_VERSION = "0.9.8.2"
     DOMAIN = "zjountries-api.vercel.app"

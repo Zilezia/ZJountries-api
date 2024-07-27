@@ -30,9 +30,14 @@ def home():
     'github']
     return render_template("doc.html", components=components)
 
-@app.route("/version", methods=['GET'])
+@app.route("/version", methods=['GET']) # should work now
 def version():
-    return jsonify({"version": app.config['API_VERSION']})
+    return jsonify({ 
+        "schemaVersion": 1,
+        "label": "version",
+        "message": app.config['API_VERSION'],
+        "color": "blue"
+    })
 
 # all
 api.add_resource(All, f"/{api_ver}/all")
