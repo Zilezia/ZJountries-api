@@ -56,7 +56,10 @@ def process_url(proc_url, data):
                 official_name = of_name_spans[0].text
     except:
         pass
-        
+    
+    if common_name == official_name and 'Republic of' in common_name:
+        common_name = common_name.replace('Republic of', '').strip()
+      
     population = "0"
     try:
         population_prop = main.find_element(By.ID, prop['population'])
@@ -124,31 +127,50 @@ def process_url(proc_url, data):
     water_perc = "0"
     total_land_area = {"km":"0", "mi":"0"}
     try:
-        total_area_prop = main.find_element(By.ID, prop['total_area'])
-        total_area_row = total_area_prop.find_elements(By.CLASS_NAME, "listview-item")
-        total_area_text = total_area_row[0].find_element(By.CLASS_NAME, "wikibase-snakview-value").text
-        total_area_strip = total_area_text.replace(" square kilometre", "").replace(",", '')
+
+        try:
+            water_perc_prop = main.find_element(By.ID, prop['water_perc'])
+        except:
+            water_perc_prop = None
         
-        ta_km = int(total_area_strip)
-
-        ta_mi = round(ta_km/1.609344)
-
-        total_area["km"] = str('{:,}'.format(ta_km))
-        total_area["mi"] = str('{:,}'.format(ta_mi))
-
-        water_perc_prop = main.find_element(By.ID, prop['water_perc'])
-        water_perc_row = water_perc_prop.find_elements(By.CLASS_NAME, "listview-item")
-        water_perc_text = water_perc_row[0].find_element(By.CLASS_NAME, "wikibase-snakview-value").text
+        if water_perc_prop != None:
+            water_perc_prop = main.find_element(By.ID, prop['water_perc'])
+            water_perc_row = water_perc_prop.find_elements(By.CLASS_NAME, "listview-item")
+            water_perc_text = water_perc_row[0].find_element(By.CLASS_NAME, "wikibase-snakview-value").text
         
-        water_perc = water_perc_text.replace(" percent", "")
+            water_perc = water_perc_text.replace(" percent", "")
+
+            water_perc_num = float(water_perc)
         
-        water_perc_num = float(water_perc)
+        try:
+            total_area_prop = main.find_element(By.ID, prop['total_area'])
+        except:
+            total_area_prop = None
+        
+        if total_area_prop != None:
+            total_area_prop = main.find_element(By.ID, prop['total_area'])
+            total_area_row = total_area_prop.find_elements(By.CLASS_NAME, "listview-item")
+            total_area_text = total_area_row[0].find_element(By.CLASS_NAME, "wikibase-snakview-value").text
+            total_area_strip = total_area_text.replace(" square kilometre", "").replace(",", '')
+            
+            ta_km = int(total_area_strip)
 
-        tla_km = round(ta_km - (water_perc_num*ta_km)/100)
-        tla_mi = round(ta_mi - (water_perc_num*ta_mi)/100)
+            ta_mi = round(ta_km/1.609344)
 
-        total_land_area["km"] = str('{:,}'.format(tla_km))
-        total_land_area["mi"] = str('{:,}'.format(tla_mi))
+            formatted_km = str('{:,}'.format(ta_km))
+            formatted_mi = str('{:,}'.format(ta_mi))
+
+            if (ta_km or ta_mi) != "0" and water_perc_num == "0":
+                total_land_area["km"], total_area["km"] = formatted_km, formatted_km
+                total_land_area["mi"], total_area["mi"] = formatted_mi, formatted_mi
+
+            elif (ta_km or ta_mi) != "0" and water_perc_num != "0":
+                tla_km = round(ta_km - (water_perc_num*ta_km)/100)
+                tla_mi = round(ta_mi - (water_perc_num*ta_mi)/100)
+
+                total_land_area["km"] = str('{:,}'.format(tla_km))
+                total_land_area["mi"] = str('{:,}'.format(tla_mi))
+            
     except:
         pass
     
@@ -275,8 +297,8 @@ def process_url(proc_url, data):
         wdata_cap_page = WebDriverWait(driver, 50).until(
             EC.presence_of_element_located((By.CLASS_NAME, "mw-body"))
         )
-        sleep(1)
         try:
+            sleep(1)
             cap_nn_prop = wdata_cap_page.find_element(By.ID, prop['native_label'])
             cap_nn_rows = cap_nn_prop.find_elements(By.CLASS_NAME, "listview-item")
             for cap_nn_row in cap_nn_rows:
@@ -286,16 +308,6 @@ def process_url(proc_url, data):
                 capital_nn.append(cap_nn_text)
         except:
             capital_nn["english"] = common_name
-        # idc about this
-        # sleep(1)
-        # try:
-        #     cap_loc_prop = wdata_cap_page.find_element(By.ID, prop['coord_loc'])
-        #     cap_loc_row = cap_loc_prop.find_element(By.CLASS_NAME, "listview-item")
-        #     cap_loc_item = cap_loc_row.find_element(By.CLASS_NAME, "wikibase-snakview-value")
-        #     cap_loc_coord = cap_loc_row.find_element(By.CLASS_NAME, "wikibase-kartographer-caption")
-        #     cap_loc = cap_loc_coord.find_element(By.XPATH, './/a').get_attribute('href')
-        # except:
-        #     pass
         try:
             sleep(1)
             cap_pop_prop = wdata_cap_page.find_element(By.ID, prop['population'])

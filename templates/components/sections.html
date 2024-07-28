@@ -2,22 +2,8 @@
 
     <h1 class="main_title"><span style="color: #c120d4;">ZJ</span>ountries-api</h1>
 
-    {% include 'components/sections/about.html' %}
-    
-    {% include 'components/sections/all.html' %}
-    
-    {% include 'components/sections/name.html' %}
-    
-    {% include 'components/sections/continent.html' %}
-    
-    {% include 'components/sections/iso.html' %}
-    
-    {% include 'components/sections/lang.html' %}
-    
-    {% include 'components/sections/fields.html' %}
-    
-    {% include 'components/sections/mult.html' %}
-    
-    {% include 'components/sections/github.html' %}
+    {% for section in sections %}
+        {% include 'components/sections/'~ section ~'.html' %}
+    {% endfor %}
 
 </main>

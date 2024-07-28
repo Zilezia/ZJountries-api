@@ -19,7 +19,7 @@ properties:
 
   official_religion: P3075
 
-  total_area: P2046
+  total_area: P2046 # in km
   water_perc: P2927
 
   # ISO 3166-1

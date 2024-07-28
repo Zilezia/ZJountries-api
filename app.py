@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 from flask_restful import Api
+import os
 
 from config import Config
 from get import *
@@ -15,20 +16,22 @@ api_ver = 'v'+app.config['API_VERSION']
 def inject_config():
     return dict(
         api_ver=api_ver,
-        api_version=app.config['API_VERSION'],  # 2nd version bc icba removing or adding "v"'s
+        api_version=app.config['API_VERSION'], # 2nd version bc icba removing or adding "v"'s
         domain=app.config['DOMAIN']
     )
 
 @app.route("/")
 def home():
-    # thinking either to have this way to load the sections or if it too much
-    components = [
+    sections = [
         'about', 'all', 
         'name', 'continent', 
         'iso', 'lang', 
         'fields', 'mult', 
     'github']
-    return render_template("doc.html", components=components)
+    # this is pretty fun v
+    # sections_dir = os.path.join(app.root_path, 'templates/components/sections')
+    # sections = [f for f in os.listdir(sections_dir) if f.endswith('.html')]
+    return render_template("doc.html", sections=sections)
 
 @app.route("/version", methods=['GET']) # should work now
 def version():
