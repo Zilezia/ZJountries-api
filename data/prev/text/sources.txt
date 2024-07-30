@@ -1,7 +1,0 @@
-Country/area/city population sources:
-
-https://worldpopulationreview.com/
-http://nsia.gov.af:8080/wp-content/uploads/2023/07/%D8%A8%D8%B1%D8%A7%D9%88%D8%B1%D8%AF-%D9%86%D9%81%D9%88%D8%B3-%DA%A9%D8%B4%D9%88%D8%B1-%D8%B3%D8%A7%D9%84-1402-04.pdf
-https://en.wikipedia.org/wiki/Demographics_of_Albania
-https://en.wikipedia.org/wiki/List_of_national_capitals_by_population
-https://citypopulation.de/en

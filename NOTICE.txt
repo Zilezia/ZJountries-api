@@ -1,0 +1,13 @@
+ZJountries-api
+Copyright (C) 2024  Zilezia
+
+All the data used in this API can be freely accessed on 
+https://www.wikimedia.org/, the data has been scrapped using
+a python package selenium. Any missing or wrong data may be 
+a result of the creators amateurishness or data not being
+mentioned at all.
+
+While this API is freely available, I would appreciate it if you
+could notify me of any significant usage or modifications.
+You can contact me at:
+https://x.com/JrezcI
